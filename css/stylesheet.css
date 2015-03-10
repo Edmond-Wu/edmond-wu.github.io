@@ -30,6 +30,19 @@
 .auto-style7 {
 	text-decoration: underline;
 }
+.auto-style8 {
+	text-decoration: none;
+}
+.auto-style9 {
+	font-family: Montserrat, Arial, Helvetica, sans-serif;
+	text-align: left;
+}
+.auto-style10 {
+	font-size: large;
+}
+.auto-style11 {
+	color: #FFFFFF;
+}
 .auto-style12 {
 	font-size: large;
 	text-decoration: none;
@@ -81,16 +94,40 @@ a:visited {
 a:hover {
 	color: cyan;
 }
-.auto-style8 {
-	text-decoration: none;
+#hello {
+	opacity: 0;
 }
-.auto-style9 {
+#monkey {
+	opacity: 0;
+}
+h1 {
 	font-family: Montserrat, Arial, Helvetica, sans-serif;
-	text-align: left;
-}
-.auto-style10 {
-	font-size: large;
-}
-.auto-style11 {
+	text-align: center;
 	color: #FFFFFF;
+}
+h2 {
+	font-family: Montserrat, Arial, Helvetica, sans-serif;
+	text-align: center;
+	color: #FFFFFF;
+}
+h3 {
+	font-family: Montserrat, Arial, Helvetica, sans-serif;
+	text-align: center;
+	color: #FFFFFF;
+}
+.typed
+{
+    width: 30em;
+    white-space:nowrap;
+    overflow:hidden;
+    -webkit-animation: type 5s steps(50, end);
+    animation: type 5s steps(50, end);
+}
+
+@keyframes type{
+    from { width: 0; }
+}
+
+@-webkit-keyframes type{
+    from { width: 0; }
 }
