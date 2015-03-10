@@ -105,15 +105,24 @@ h1 {
 	text-align: center;
 	color: #FFFFFF;
 }
+h1:hover {
+	color: cyan;
+}
 h2 {
 	font-family: Montserrat, Arial, Helvetica, sans-serif;
 	text-align: center;
 	color: #FFFFFF;
 }
+h2:hover {
+	color: cyan;
+}
 h3 {
 	font-family: Montserrat, Arial, Helvetica, sans-serif;
 	text-align: center;
 	color: #FFFFFF;
+}
+h3:hover {
+	color: cyan;
 }
 .typed
 {
