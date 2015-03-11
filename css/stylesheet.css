@@ -126,7 +126,7 @@ h3:hover {
 }
 .typed
 {
-    width: 30em;
+    width: 50em;
     white-space:nowrap;
     overflow:hidden;
     -webkit-animation: type 5s steps(50, end);
