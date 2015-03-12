@@ -104,26 +104,26 @@ a:hover {
 h1 {
 	font-family: Montserrat, Arial, Helvetica, sans-serif;
 	text-align: center;
-	color: #FFFFFF;
+	color: cyan;;
 }
 h1:hover {
-	color: cyan;
+	color: white;
 }
 h2 {
 	font-family: Montserrat, Arial, Helvetica, sans-serif;
 	text-align: center;
-	color: #FFFFFF;
+	color: cyan;
 }
 h2:hover {
-	color: cyan;
+	color: white;
 }
 h3 {
 	font-family: Montserrat, Arial, Helvetica, sans-serif;
 	text-align: center;
-	color: #FFFFFF;
+	color: cyan;
 }
 h3:hover {
-	color: cyan;
+	color: white;
 }
 .typed
 {
