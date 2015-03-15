@@ -86,6 +86,24 @@
 	font-size: x-large;
 	font-family: Montserrat, Arial, Helvetica, sans-serif;
 }
+.auto-style21 {
+	font-size: medium;
+	text-decoration: none;
+}
+.auto-style22 {
+	color: #FFFFFF;
+	font-size: medium;
+	font-family: Montserrat, Arial, Helvetica, sans-serif;
+}
+.auto-style23 {
+	font-size: medium;
+}
+.auto-style24 {
+	font-family: Montserrat, Arial, Helvetica, sans-serif;
+	text-align: left;
+	color: #FFFFFF;
+	font-size: medium;
+}
 a:link {
 	color: white;
 }
