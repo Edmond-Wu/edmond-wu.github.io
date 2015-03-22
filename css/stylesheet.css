@@ -143,6 +143,9 @@ h3 {
 h3:hover {
 	color: white;
 }
+h4:hover {
+	color: white;
+}
 .typed
 {
     width: 50em;
