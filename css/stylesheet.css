@@ -7,11 +7,24 @@
 	z-index: -1;
 	color: black;
 }
+#hello {
+	opacity: 0;
+}
+#monkey {
+	opacity: 0;
+}
 .stretch {
 	width:100%;
 	height:100%;
 }
-
+.typed
+{
+    width: 50em;
+    white-space:nowrap;
+    overflow:hidden;
+    -webkit-animation: type 5s steps(50, end);
+    animation: type 5s steps(50, end);
+}
 .auto-style1 {
 	font-family: Montserrat, Arial, Helvetica, sans-serif;
 }
@@ -113,12 +126,6 @@ a:visited {
 a:hover {
 	color: cyan;
 }
-#hello {
-	opacity: 0;
-}
-#monkey {
-	opacity: 0;
-}
 h1 {
 	font-family: Montserrat, Arial, Helvetica, sans-serif;
 	text-align: center;
@@ -146,14 +153,7 @@ h3:hover {
 h4:hover {
 	color: white;
 }
-.typed
-{
-    width: 50em;
-    white-space:nowrap;
-    overflow:hidden;
-    -webkit-animation: type 5s steps(50, end);
-    animation: type 5s steps(50, end);
-}
+
 
 @keyframes type{
     from { width: 0; }
