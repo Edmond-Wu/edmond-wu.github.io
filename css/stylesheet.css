@@ -25,20 +25,13 @@
     -webkit-animation: type 5s steps(50, end);
     animation: type 5s steps(50, end);
 }
-.auto-style1 {
-	font-family: Montserrat, Arial, Helvetica, sans-serif;
-}
-.auto-style2 {
+.auto-style1, .auto-style2, .auto-style5 {
 	font-family: Montserrat, Arial, Helvetica, sans-serif;
 	text-align: center;
-}
-.auto-style5 {
-	font-family: Montserrat, Arial, Helvetica, sans-serif;
-	text-align: center;
-	color: #FFFFFF;
+	color: white;
 }
 .auto-style6 {
-	color: #FFFFFF;
+	color: white;
 	font-size: large;
 }
 .auto-style7 {
@@ -55,7 +48,7 @@
 	font-size: large;
 }
 .auto-style11 {
-	color: #FFFFFF;
+	color: white;
 }
 .auto-style12 {
 	font-size: large;
@@ -64,21 +57,21 @@
 .auto-style13 {
 	font-family: Montserrat, Arial, Helvetica, sans-serif;
 	text-align: left;
-	color: #FFFFFF;
+	color: white;
 }
 .auto-style14 {
 	font-family: Montserrat, Arial, Helvetica, sans-serif;
-	color: #FFFFFF;
+	color: white;
 }
 .auto-style15 {
-	color: #FFFFFF;
+	color: white;
 	font-size: large;
 	font-family: Montserrat, Arial, Helvetica, sans-serif;
 }
 .auto-style16 {
 	font-family: Montserrat, Arial, Helvetica, sans-serif;
 	text-align: center;
-	color: #FFFFFF;
+	color: white;
 	font-size: x-large;
 }
 .auto-style17 {
@@ -91,11 +84,11 @@
 .auto-style19 {
 	width: 100%;
 	height: 100%;
-	color: #FFFFFF;
+	color: white;
 	font-family: Montserrat, Arial, Helvetica, sans-serif;
 }
 .auto-style20 {
-	color: #FFFFFF;
+	color: white;
 	font-size: x-large;
 	font-family: Montserrat, Arial, Helvetica, sans-serif;
 }
@@ -104,7 +97,7 @@
 	text-decoration: none;
 }
 .auto-style22 {
-	color: #FFFFFF;
+	color: white;
 	font-size: medium;
 	font-family: Montserrat, Arial, Helvetica, sans-serif;
 }
@@ -114,7 +107,7 @@
 .auto-style24 {
 	font-family: Montserrat, Arial, Helvetica, sans-serif;
 	text-align: left;
-	color: #FFFFFF;
+	color: white;
 	font-size: medium;
 }
 a:link {
@@ -126,39 +119,24 @@ a:visited {
 a:hover {
 	color: cyan;
 }
-h1 {
-	font-family: Montserrat, Arial, Helvetica, sans-serif;
-	text-align: center;
-	color: cyan;;
-}
-h1:hover {
-	color: white;
-}
-h2 {
+h1, h2, h3, h4 {
 	font-family: Montserrat, Arial, Helvetica, sans-serif;
 	text-align: center;
 	color: cyan;
 }
-h2:hover {
+h1:hover, h2:hover, h3:hover, h4:hover {
 	color: white;
 }
-h3 {
-	font-family: Montserrat, Arial, Helvetica, sans-serif;
+h5 {
+	color: white;
 	text-align: center;
+}
+h5:hover {
 	color: cyan;
 }
-h3:hover {
-	color: white;
-}
-h4:hover {
-	color: white;
-}
-
-
 @keyframes type{
     from { width: 0; }
 }
-
 @-webkit-keyframes type{
     from { width: 0; }
 }

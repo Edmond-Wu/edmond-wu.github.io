@@ -1,7 +1,7 @@
 $(document).ready(function() {
     $('#hello').hide();
-	$('#hello').fadeTo(800, 1);
+	$('#hello').fadeTo(1000, 1);
 	$('#monkey').hide();
-	$('#monkey').delay(500).fadeTo(800, 1);
+	$('#monkey').delay(500).fadeTo(1000, 1);
 });
 
