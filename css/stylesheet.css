@@ -19,7 +19,7 @@
 }
 .typed
 {
-    width: 35em;
+    width: 34em;
     white-space:nowrap;
     overflow:hidden;
     -webkit-animation: type 5s steps(50, end);
