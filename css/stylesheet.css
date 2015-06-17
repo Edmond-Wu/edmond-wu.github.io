@@ -13,6 +13,9 @@
 #monkey {
 	opacity: 0;
 }
+#resources {
+	visibility: hidden;
+}
 .stretch {
 	width:100%;
 	height:100%;
