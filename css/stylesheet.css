@@ -1,3 +1,7 @@
+body{
+	color: white;
+	font-family: Montserrat, Arial, sans-serif;
+}
 #background {
 	width: 100%;
 	height: 100%;
@@ -16,16 +20,13 @@
 #resources {
 	visibility: hidden;
 }
-.navbar{
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-}
 .bar{
 	display: inline;
 	background-color: black;
 	padding: 5px 5px;
 	border: 2px solid transparent;
+	text-decoration: none;
+	font-size: large;
 }
 .bar:hover {
 	background-color: white;
@@ -33,6 +34,11 @@
 	border-right:2px solid #aaaaaa;
 	border-bottom:2px solid #aaaaaa;
 	border-left:2px solid #777777;
+}
+.projectsli{
+	text-decoration: none;
+	font-size: large;
+	text-align: center;
 }
 .stretch {
 	width:100%;
@@ -46,86 +52,6 @@
     -webkit-animation: type 5s steps(50, end);
     animation: type 5s steps(50, end);
 }
-.auto-style1, .auto-style2, .auto-style5 {
-	font-family: Montserrat, Arial, Helvetica, sans-serif;
-	text-align: center;
-	color: white;
-}
-.auto-style6 {
-	color: white;
-	font-size: large;
-}
-.auto-style7 {
-	text-decoration: underline;
-}
-.auto-style8 {
-	text-decoration: none;
-	font-family: Montserrat;
-	font-size: large;
-}
-.auto-style11 {
-	color: white;
-}
-.auto-style12 {
-	font-size: large;
-	text-decoration: none;
-}
-.auto-style13 {
-	font-family: Montserrat, Arial, Helvetica, sans-serif;
-	text-align: left;
-	color: white;
-}
-.auto-style14 {
-	font-family: Montserrat, Arial, Helvetica, sans-serif;
-	color: white;
-}
-.auto-style15 {
-	color: white;
-	font-size: large;
-	font-family: Montserrat, Arial, Helvetica, sans-serif;
-}
-.auto-style16 {
-	font-family: Montserrat, Arial, Helvetica, sans-serif;
-	text-align: center;
-	color: white;
-	font-size: x-large;
-}
-.auto-style17 {
-	text-decoration: none;
-	text-align: center;
-}
-.auto-style18 {
-	text-align: center;
-}
-.auto-style19 {
-	width: 100%;
-	height: 100%;
-	color: white;
-	font-family: Montserrat, Arial, Helvetica, sans-serif;
-}
-.auto-style20 {
-	color: white;
-	font-size: x-large;
-	font-family: Montserrat, Arial, Helvetica, sans-serif;
-}
-.auto-style21 {
-	font-size: medium;
-	text-decoration: none;
-}
-.auto-style22 {
-	color: white;
-	font-size: medium;
-	font-family: Montserrat, Arial, Helvetica, sans-serif;
-}
-.auto-style23 {
-	font-size: medium;
-}
-.auto-style24 {
-	font-family: Montserrat, Arial, Helvetica, sans-serif;
-	text-align: left;
-	color: white;
-	font-size: medium;
-}
 a:link {
 	color: white;
 }
@@ -136,19 +62,19 @@ a:hover {
 	color: cyan;
 }
 h1, h2, h3, h4 {
-	font-family: Montserrat, Arial, Helvetica, sans-serif;
 	text-align: center;
 	color: cyan;
 }
 h1:hover, h2:hover, h3:hover, h4:hover {
 	color: white;
 }
-h5 {
-	color: white;
-	text-align: center;
-}
 h5:hover {
 	color: cyan;
+}
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
 }
 @keyframes type{ 
   from { width: 0; } 
