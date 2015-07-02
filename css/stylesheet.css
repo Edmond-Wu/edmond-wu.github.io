@@ -37,8 +37,8 @@ body{
 }
 .projectsli{
 	text-decoration: none;
-	font-size: large;
 	text-align: center;
+	margin: 15px 0;
 }
 .stretch {
 	width:100%;
@@ -64,6 +64,9 @@ a:hover {
 h1, h2, h3, h4 {
 	text-align: center;
 	color: cyan;
+}
+h5 {
+	text-align: center;
 }
 h1:hover, h2:hover, h3:hover, h4:hover {
 	color: white;
