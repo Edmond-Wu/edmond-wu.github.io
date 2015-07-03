@@ -19,6 +19,7 @@ body{
 .bar{
 	display: inline;
 	background-color: black;
+	transition: background-color 0.5s ease;
 	padding: 5px 5px;
 	border: 2px solid transparent;
 	text-decoration: none;
