@@ -17,13 +17,11 @@ $(document).ready(function() {
 	$('#cs170').delay(500).fadeTo(1000, 1);
 	$('#info').hide();
 	$('#info').delay(1000).fadeTo(1000, 1);
-	$('.row').hide();
-	$('.row').delay(1500).fadeTo(1000, 1);
+	$('#moreinfo').hide();
+	$('#moreinfo').delay(1500).fadeTo(1000, 1);
 	$('#projects').hide();
 	$('#projects').delay(500).fadeTo(1000, 1);
 	$('#projects2').hide();
 	$('#projects2').delay(1000).fadeTo(1000, 1);
-	$('.projectsli').hide();
-	$('.projectsli').delay(1000).fadeTo(1000, 1);
 });
 
