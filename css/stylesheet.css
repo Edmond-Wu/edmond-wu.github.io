@@ -9,16 +9,12 @@ body{
 	left: 0px;
 	top: 0px;
 	z-index: -1;
-	color: black;
 }
 #hello {
 	opacity: 0;
 }
 #monkey {
 	opacity: 0;
-}
-#resources {
-	visibility: hidden;
 }
 .bar{
 	display: inline;
@@ -78,6 +74,12 @@ ul {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
+}
+p {
+	text-align: center;
+}
+p:hover{
+	color: cyan;
 }
 @keyframes type{ 
   from { width: 0; } 
