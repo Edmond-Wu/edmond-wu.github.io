@@ -55,11 +55,11 @@ a:visited {
 	color: white;
 }
 a:hover {
-	color: cyan;
+	color: #00aced;
 }
 h1, h2, h3, h4 {
 	text-align: center;
-	color: cyan;
+	color: #00aced;
 }
 h5 {
 	text-align: center;
@@ -68,7 +68,7 @@ h1:hover, h2:hover, h3:hover, h4:hover {
 	color: white;
 }
 h5:hover {
-	color: cyan;
+	color: #00aced;
 }
 ul {
 	list-style-type: none;
@@ -79,7 +79,7 @@ p {
 	text-align: center;
 }
 p:hover{
-	color: cyan;
+	color: #00aced;
 }
 @keyframes type{ 
   from { width: 0; } 
