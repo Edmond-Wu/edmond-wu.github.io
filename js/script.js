@@ -1,4 +1,9 @@
 $(document).ready(function() {
+	/*$('.aboutimages').slick({
+		infinite: true,
+		slidesToShow: 3,
+		slidesToScroll: 3
+	});*/
     $('#title').hide();
 	$('#delay1').hide();
 	$('#delay2').hide();
