@@ -1,5 +1,6 @@
 body{
 	color: white;
+	background-color: black;
 	font-family: Montserrat, Arial, sans-serif;
 }
 #background {
@@ -15,6 +16,9 @@ body{
 }
 #monkey {
 	opacity: 0;
+}
+#profpic{
+    border-radius: 100%;
 }
 .bar{
 	display: inline;
