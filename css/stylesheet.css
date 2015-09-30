@@ -18,7 +18,7 @@ body{
 	opacity: 0;
 }
 #profpic{
-    border-radius: 100%;
+    border-radius: 100% !important;
 }
 .bar{
 	display: inline;
