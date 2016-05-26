@@ -3,21 +3,7 @@ body{
 	background-color: black;
 	font-family: Montserrat, Arial, sans-serif;
 }
-#background {
-	width: 100%;
-	height: 100%;
-	position: fixed;
-	left: 0px;
-	top: 0px;
-	z-index: -1;
-}
-#hello {
-	opacity: 0;
-}
-#monkey {
-	opacity: 0;
-}
-#profpic{
+.profpic{
     border-radius: 100% !important;
 }
 .bar{
