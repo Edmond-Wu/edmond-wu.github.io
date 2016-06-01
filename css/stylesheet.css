@@ -39,6 +39,12 @@ body{
     -webkit-animation: type 5s steps(50, end);
     animation: type 5s steps(50, end);
 }
+.about_list {
+	font-size: 110%;
+}
+.about_list:hover {
+	color: #00aced;
+}
 a:link {
 	color: white;
 }
