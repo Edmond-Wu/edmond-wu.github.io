@@ -6,6 +6,7 @@ $(document).ready(function() {
 	});*/
 	$('#toggled').hide();
 	$('#resource-toggled').hide();
+	$('#projects-toggled').hide();
     $('.title').hide();
 	$('.delay1').hide();
 	$('.delay2').hide();
@@ -22,6 +23,9 @@ $(document).ready(function() {
 	});
 	$('#toggle-resources').click(function() {
 		$('#resource-toggled').slideToggle();
+	});
+	$('#toggle-projects').click(function() {
+		$('#projects-toggled').slideToggle();
 	});
 });
 
