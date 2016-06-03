@@ -44,6 +44,9 @@ body{
 .about_list:hover {
 	color: #00aced;
 }
+.underline {
+	text-decoration: underline;
+}
 a:link {
 	color: white;
 }
