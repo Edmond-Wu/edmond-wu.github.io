@@ -38,12 +38,6 @@ body{
     -webkit-animation: type 5s steps(50, end);
     animation: type 5s steps(50, end);
 }
-.about_list {
-	font-size: 110%;
-}
-.about_list:hover {
-	color: #00aced;
-}
 .underline {
 	text-decoration: underline;
 }
@@ -82,5 +76,13 @@ p:hover{
 }
 @keyframes type{ 
   from { width: 0; } 
-} 
-
+}
+.table {
+	border: none !important;
+	background-color: black;
+	color: white;
+	font-size: 102%;
+}
+.table:hover {
+	color: #00aced;
+}
