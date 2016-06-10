@@ -86,3 +86,7 @@ p:hover{
 .table:hover {
 	color: #00aced;
 }
+.about-header {
+	text-align: left;
+	text-decoration: underline;
+}
