@@ -87,6 +87,10 @@ p:hover{
 	color: #00aced;
 }
 .about-header {
+	color: #00aced;
 	text-align: left;
 	text-decoration: underline;
+}
+.about-header:hover {
+	color: white;
 }

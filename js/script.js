@@ -4,11 +4,7 @@ $(document).ready(function() {
 		slidesToShow: 3,
 		slidesToScroll: 3
 	});*/
-	$('#toggled').hide();
-	$('#about-toggled1').hide();
-	$('#about-toggled2').hide()
-	$('#resource-toggled').hide();
-	$('#projects-toggled').hide();
+	$('.toggled').hide();
     $('.title').hide();
 	$('.delay1').hide();
 	$('.delay2').hide();
@@ -20,20 +16,8 @@ $(document).ready(function() {
 	$('.delay3').delay(2000).fadeTo(1000, 1);
 	$('.delay4').delay(2500).fadeTo(1000, 1);
 
-	$('#toggle').click(function() {
-		$('#toggled').slideToggle();
-	});
-	$('#toggle-about1').click(function() {
-		$('#about-toggled1').slideToggle();
-	});
-	$('#toggle-about2').click(function() {
-		$('#about-toggled2').slideToggle();
-	});
-	$('#toggle-resources').click(function() {
-		$('#resource-toggled').slideToggle();
-	});
-	$('#toggle-projects').click(function() {
-		$('#projects-toggled').slideToggle();
+	$('.toggle').click(function() {
+		$('.toggled').slideToggle();
 	});
 });
 
