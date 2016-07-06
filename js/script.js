@@ -1,5 +1,7 @@
 $(document).ready(function() {
 	$('.toggled').hide();
+	$('.academics-toggled').hide();
+	$('.work-toggled').hide();
     $('.title, .delay1, .delay2, .delay3').css("visibility", "hidden");
 	$('.title').css("visibility", "visible").hide().fadeTo(1000, 1);
 	$('.delay1').css("visibility", "visible").hide().delay(750).fadeTo(1000, 1);
@@ -8,6 +10,12 @@ $(document).ready(function() {
 
 	$('.toggle').click(function() {
 		$('.toggled').slideToggle();
+	});
+	$('.toggle-academics').click(function() {
+		$('.academics-toggled').slideToggle();
+	});
+	$('.toggle-work').click(function() {
+		$('.work-toggled').slideToggle();
 	});
 });
 

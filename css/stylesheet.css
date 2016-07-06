@@ -37,37 +37,25 @@ body{
 .underline {
 	text-decoration: underline;
 }
-a:link {
+a:link, a:visited, h1:hover, h2:hover, h3:hover, h4:hover {
 	color: white;
 }
-a:visited {
-	color: white;
-}
-a:hover {
+a:hover, h5:hover {
 	color: #00aced;
 }
 h1, h2, h3, h4 {
 	text-align: center;
 	color: #00aced;
 }
-h5 {
+h5, p {
 	text-align: center;
-}
-h1:hover, h2:hover, h3:hover, h4:hover {
-	color: white;
-}
-h5:hover {
-	color: #00aced;
 }
 ul {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
 }
-p {
-	text-align: center;
-}
-p:hover{
+p:hover {
 	color: #3bc9ff;
 }
 @keyframes type{ 
@@ -87,6 +75,6 @@ p:hover{
 	text-align: left;
 	text-decoration: underline;
 }
-.about-header:hover {
+.about-header:hover, #email, #linkedin, #github, #email:hover, #linkedin:hover, #github:hover {
 	color: white;
 }
