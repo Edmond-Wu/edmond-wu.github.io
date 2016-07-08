@@ -1,80 +1,90 @@
-body{
-	color: white;
-	background-color: black;
-	font-family: Montserrat, Arial, sans-serif;
+body {
+    color: white;
+    background-color: black;
+    font-family: Montserrat, Arial, sans-serif;
 }
-.profpic{
+
+.profpic {
     border-radius: 100% !important;
 }
-.bar{
-	display: inline;
-	background-color: black;
-	transition: background-color 0.5s ease;
-	padding: 5px 5px;
-	border: 2px solid transparent;
-	text-decoration: none;
-	font-size: large;
+
+.bar {
+    display: inline;
+    background-color: black;
+    transition: background-color 0.5s ease;
+    padding: 5px 5px;
+    border: 2px solid transparent;
+    text-decoration: none;
+    font-size: large;
 }
+
 .bar:hover {
-	background-color: white;
-	border-top:2px solid #777777;
-	border-right:2px solid #aaaaaa;
-	border-bottom:2px solid #aaaaaa;
-	border-left:2px solid #777777;
+    background-color: white;
+    border-top: 2px solid #777777;
+    border-right: 2px solid #aaaaaa;
+    border-bottom: 2px solid #aaaaaa;
+    border-left: 2px solid #777777;
 }
-.projectsli{
-	text-decoration: none;
-	text-align: center;
-	margin: 15px 0;
+
+.projectsli {
+    text-decoration: none;
+    text-align: center;
+    margin: 15px 0;
 }
+
 .typed {
     width: 34em;
-    white-space:nowrap;
-    overflow:hidden;
+    white-space: nowrap;
+    overflow: hidden;
     -webkit-animation: type 5s steps(50, end);
     animation: type 5s steps(50, end);
 }
+
 .underline {
-	text-decoration: underline;
+    text-decoration: underline;
 }
+
 a:link, a:visited, h1:hover, h2:hover, h3:hover, h4:hover {
-	color: white;
+    color: white;
 }
-a:hover, h5:hover {
-	color: #00aced;
+
+a:hover {
+    color: #0099d4;
 }
-h1, h2, h3, h4 {
-	text-align: center;
-	color: #00aced;
-}
+
 h5, p {
-	text-align: center;
+    text-align: center;
 }
+
 ul {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
-p:hover {
-	color: #3bc9ff;
+
+h1, h2, h3, h4, h5:hover, .table:hover {
+    color: #00aced;
 }
-@keyframes type{ 
-  from { width: 0; } 
+
+@keyframes type {
+    from {
+        width: 0;
+    }
 }
+
 .table {
-	border: none !important;
-	background-color: black;
-	color: white;
-	font-size: 102%;
+    border: none !important;
+    background-color: black;
+    color: white;
+    font-size: 102%;
 }
-.table:hover {
-	color: #3bc9ff;
-}
+
 .about-header {
-	color: #00aced;
-	text-align: left;
-	text-decoration: underline;
+    color: #00aced;
+    text-align: left;
+    text-decoration: underline;
 }
-.about-header:hover, #email, #linkedin, #github, #email:hover, #linkedin:hover, #github:hover {
-	color: white;
+
+.click:hover, .about-header:hover, #email, #linkedin, #github, #email:hover, #linkedin:hover, #github:hover {
+    color: white;
 }
