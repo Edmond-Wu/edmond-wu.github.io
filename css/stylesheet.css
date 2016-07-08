@@ -4,6 +4,34 @@ body {
     font-family: Montserrat, Arial, sans-serif;
 }
 
+a:link, a:visited, h1:hover, h2:hover, h3:hover, h4:hover {
+    color: white;
+}
+
+a:hover {
+    color: #00aced;
+}
+
+h5, p {
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5:hover, .table:hover {
+    color: #3bc9ff;
+}
+
+@keyframes type {
+    from {
+        width: 0;
+    }
+}
+
 .profpic {
     border-radius: 100% !important;
 }
@@ -42,34 +70,6 @@ body {
 
 .underline {
     text-decoration: underline;
-}
-
-a:link, a:visited, h1:hover, h2:hover, h3:hover, h4:hover {
-    color: white;
-}
-
-a:hover {
-    color: #00aced;
-}
-
-h5, p {
-    text-align: center;
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-h1, h2, h3, h4, h5:hover, .table:hover {
-    color: #3bc9ff;
-}
-
-@keyframes type {
-    from {
-        width: 0;
-    }
 }
 
 .table {
