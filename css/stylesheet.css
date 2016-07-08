@@ -49,7 +49,7 @@ a:link, a:visited, h1:hover, h2:hover, h3:hover, h4:hover {
 }
 
 a:hover {
-    color: #0099d4;
+    color: #00aced;
 }
 
 h5, p {
@@ -63,7 +63,7 @@ ul {
 }
 
 h1, h2, h3, h4, h5:hover, .table:hover {
-    color: #00aced;
+    color: #3bc9ff;
 }
 
 @keyframes type {
