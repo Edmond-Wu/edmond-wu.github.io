@@ -8,7 +8,7 @@ a:link, a:visited, h1:hover, h2:hover, h3:hover, h4:hover {
     color: white;
 }
 
-a:hover {
+a:hover, .about-header, .label-170 {
     color: #00aced;
 }
 
@@ -22,8 +22,12 @@ ul {
     padding: 0;
 }
 
-h1, h2, h3, h4, h5:hover, .table:hover {
+h1, h2, h3, h4, h5:hover, .label-170:hover {
     color: #3bc9ff;
+}
+
+.about-header:hover {
+    color: #3bc9ff !important;
 }
 
 @keyframes type {
@@ -80,11 +84,18 @@ h1, h2, h3, h4, h5:hover, .table:hover {
 }
 
 .about-header {
-    color: #00aced;
     text-align: left;
     text-decoration: underline;
 }
 
 .click:hover, .about-header:hover, #email, #linkedin, #github, #email:hover, #linkedin:hover, #github:hover {
     color: white;
+}
+
+.label-170 {
+    font-size: 112%;
+}
+
+.two-brs {
+    padding-bottom: 2em;
 }
