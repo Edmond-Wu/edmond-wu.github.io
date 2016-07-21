@@ -1,7 +1,15 @@
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Montserrat-Regular'), url(../assets/fonts/montserrat.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
 body {
     color: white;
     background-color: black;
-    font-family: Montserrat, Arial, sans-serif;
+    font-family: Montserrat, sans-serif !important;
 }
 
 a:link, a:visited, h1:hover, h2:hover, h3:hover, h4:hover {
@@ -22,6 +30,11 @@ ul {
     padding: 0;
 }
 
+table, tr, td, tbody, .table {
+    border: 0 !important;
+    border-spacing: 0 !important;
+}
+
 h1, h2, h3, h4, h5:hover, .label-170:hover {
     color: #3bc9ff;
 }
@@ -38,6 +51,7 @@ h1, h2, h3, h4, h5:hover, .label-170:hover {
 
 .profpic {
     border-radius: 100% !important;
+    max-width: 180px;
 }
 
 .bar {
@@ -45,17 +59,17 @@ h1, h2, h3, h4, h5:hover, .label-170:hover {
     background-color: black;
     transition: background-color 0.5s ease;
     padding: 5px 5px;
-    border: 2px solid transparent;
+    border: 1px solid transparent;
     text-decoration: none;
     font-size: large;
 }
 
 .bar:hover {
     background-color: white;
-    border-top: 2px solid #777777;
-    border-right: 2px solid #aaaaaa;
-    border-bottom: 2px solid #aaaaaa;
-    border-left: 2px solid #777777;
+    border-top: 1px solid #777777;
+    border-right: 1px solid #aaaaaa;
+    border-bottom: 1px solid #aaaaaa;
+    border-left: 1px solid #777777;
 }
 
 .projectsli {
@@ -70,6 +84,7 @@ h1, h2, h3, h4, h5:hover, .label-170:hover {
     overflow: hidden;
     -webkit-animation: type 5s steps(50, end);
     animation: type 5s steps(50, end);
+    font-family: inherit;
 }
 
 .underline {
@@ -77,10 +92,9 @@ h1, h2, h3, h4, h5:hover, .label-170:hover {
 }
 
 .table {
-    border: none !important;
     background-color: black;
-    color: white;
-    font-size: 102%;
+    text-align: left;
+    /*color: white;*/
 }
 
 .about-header {
@@ -92,10 +106,18 @@ h1, h2, h3, h4, h5:hover, .label-170:hover {
     color: white;
 }
 
+.delay1, .delay2, .delay3, .about-header, .table, .label-170, .bar {
+    font-family: inherit;
+}
+
 .label-170 {
     font-size: 112%;
 }
 
 .two-brs {
     padding-bottom: 2em;
+}
+
+.one-br {
+    padding-bottom: 1em;
 }
