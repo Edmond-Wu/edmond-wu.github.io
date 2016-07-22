@@ -103,7 +103,7 @@ h1, h2, h3, h4, h5:hover {
 }
 
 .about-header {
-    text-align: left;
+    /*text-align: left;*/
     text-decoration: underline;
 }
 
