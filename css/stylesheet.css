@@ -7,12 +7,11 @@
 }
 
 body {
-    color: white;
     background-color: black;
     font-family: Montserrat, sans-serif !important;
 }
 
-a:link, a:visited, h1:hover, h2:hover, h3:hover, h4:hover {
+body, a:link, a:visited, h1:hover, h2:hover, h3:hover, h4:hover {
     color: white;
 }
 
@@ -35,11 +34,11 @@ table, tr, td, tbody, .table {
     border-spacing: 0 !important;
 }
 
-h1, h2, h3, h4, h5:hover, .label-170:hover {
+h1, h2, h3, h4, h5:hover {
     color: #3bc9ff;
 }
 
-.about-header:hover {
+.label-170:hover, .about-header:hover {
     color: #3bc9ff !important;
 }
 
@@ -54,22 +53,29 @@ h1, h2, h3, h4, h5:hover, .label-170:hover {
     max-width: 180px;
 }
 
-.bar {
-    display: inline;
+.mobile-table, .bar {
     background-color: black;
     transition: background-color 0.5s ease;
-    padding: 5px 5px;
-    border: 1px solid transparent;
     text-decoration: none;
     font-size: large;
+    border: 1px solid transparent !important;
 }
 
-.bar:hover {
+.mobile-table {
+    padding: 3px;
+}
+
+.bar {
+    display: inline;
+    padding: 5px 10px 5px 10px;
+}
+
+.bar:hover, .mobile-table:hover {
     background-color: white;
-    border-top: 1px solid #777777;
-    border-right: 1px solid #aaaaaa;
-    border-bottom: 1px solid #aaaaaa;
-    border-left: 1px solid #777777;
+    border-top: 1px solid #777777 !important;
+    border-right: 1px solid #aaaaaa !important;
+    border-bottom: 1px solid #aaaaaa !important;
+    border-left: 1px solid #777777 !important;
 }
 
 .projectsli {
@@ -94,7 +100,6 @@ h1, h2, h3, h4, h5:hover, .label-170:hover {
 .table {
     background-color: black;
     text-align: left;
-    /*color: white;*/
 }
 
 .about-header {
@@ -102,16 +107,12 @@ h1, h2, h3, h4, h5:hover, .label-170:hover {
     text-decoration: underline;
 }
 
-.click:hover, .about-header:hover, #email, #linkedin, #github, #email:hover, #linkedin:hover, #github:hover {
+.no-hover:hover, .click:hover, .about-header:hover, #email, #linkedin, #github, #email:hover, #linkedin:hover, #github:hover {
     color: white;
 }
 
 h1, h2, h3, h4, h5, .delay1, .delay2, .delay3, .about-header, .table, .label-170, .bar {
     font-family: inherit;
-}
-
-.label-170 {
-    font-size: 112%;
 }
 
 .two-brs {
