@@ -29,8 +29,8 @@ ul {
     padding: 0;
 }
 
-table {
-    border-color: black !important;
+table, tr, td, tbody, .black-table, .bar {
+    border-color: black;
 }
 
 table, tr, td, tbody, .black-table, .bar {
