@@ -29,7 +29,7 @@ ul {
     padding: 0;
 }
 
-table, tr, td, tbody, .table {
+table, tr, td, tbody, .black-table {
     border: 0 !important;
     border-spacing: 0 !important;
 }
@@ -97,10 +97,12 @@ h1, h2, h3, h4, h5:hover {
     text-decoration: underline;
 }
 
-.table {
+
+.black-table {
     background-color: black;
     text-align: left;
 }
+
 
 .about-header {
     /*text-align: left;*/
