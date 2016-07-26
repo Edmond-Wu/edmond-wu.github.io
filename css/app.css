@@ -34,7 +34,7 @@ table, tr, td, tbody, .black-table, .bar, .row {
 }
 
 table, tr, td, tbody, .black-table, .bar {
-    border: 1px solid black;
+    border: 1px solid black !important;
     border-spacing: 0 !important;
 }
 
