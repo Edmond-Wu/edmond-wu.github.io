@@ -30,11 +30,11 @@ ul {
 }
 
 table {
-    border-color: transparent;
+    border-color: black !important;
 }
 
 table, tr, td, tbody, .black-table, .bar {
-    border: 1px solid transparent;
+    border: 1px solid black;
     border-spacing: 0 !important;
 }
 
@@ -75,10 +75,10 @@ h1, h2, h3, h4, h5:hover {
 
 .bar:hover, .mobile-table:hover {
     background-color: white;
-    border-top: 1px solid #777777 !important;
-    border-right: 1px solid #aaaaaa !important;
-    border-bottom: 1px solid #aaaaaa !important;
-    border-left: 1px solid #777777 !important;
+    border-top: 1px solid #777777;
+    border-right: 1px solid #aaaaaa;
+    border-bottom: 1px solid #aaaaaa;
+    border-left: 1px solid #777777;
 }
 
 .projectsli {
