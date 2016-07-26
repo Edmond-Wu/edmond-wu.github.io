@@ -58,7 +58,10 @@ h1, h2, h3, h4, h5:hover {
     transition: background-color 0.5s ease;
     text-decoration: none;
     font-size: large;
-    border: 1px solid black !important;
+    border-top: 1px solid black !important;
+    border-right: 1px solid black !important;
+    border-bottom: 1px solid black !important;
+    border-left: 1px solid black !important;
 }
 
 .mobile-table {
