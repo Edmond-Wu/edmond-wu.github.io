@@ -96,6 +96,7 @@ h1, h2, h3, h4, h5:hover {
     -webkit-animation: type 5s steps(50, end);
     animation: type 5s steps(50, end);
     font-family: inherit;
+    display: inline-block;
 }
 
 .underline {
