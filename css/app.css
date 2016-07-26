@@ -30,7 +30,10 @@ ul {
 }
 
 table, tr, td, tbody, .black-table, .bar, .row {
-    border: 1px solid black !important;
+    border-top: 1px solid black !important;
+    border-bottom: 1px solid black !important;
+    border-left: 1px solid black !important;
+    border-right: 1px solid black !important;
 }
 
 table, tr, td, tbody, .black-table, .bar, .row {
