@@ -33,6 +33,10 @@ table, tr, td, tbody, .black-table, .bar, .row {
     border: 1px solid black !important;
 }
 
+table, tr, td, tbody, .black-table, .bar, .row {
+    border-color: black !important;
+}
+
 h1, h2, h3, h4, h5:hover {
     color: #3bc9ff;
 }
