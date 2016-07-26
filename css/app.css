@@ -30,9 +30,8 @@ ul {
 }
 
 table, tr, td, tbody, .black-table {
-    border: 0 !important;
+    border: 1px solid transparent;
     border-spacing: 0 !important;
-    border-color: transparent;
 }
 
 h1, h2, h3, h4, h5:hover {
