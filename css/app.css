@@ -16,11 +16,11 @@ body {
     font-family: Montserrat, sans-serif !important;
 }
 
-body, .mobile-table, .bar, .black-table {
+body, table, .mobile-table, .bar, .black-table {
     background-color: black;
 }
 
-body, a:link, a:visited, h1:hover, h2:hover, h3:hover, h4:hover, .no-hover:hover, .click:hover, .about-header:hover, #email, #linkedin, #github, #email:hover, #linkedin:hover, #github:hover {
+body, a:link, a:visited, h1:hover, h2:hover, h3:hover, h4:hover, .no-hover:hover, .click:hover, .about-header:hover {
     color: white;
 }
 
@@ -116,6 +116,10 @@ h1, h2, h3, h4, h5, .delay1, .delay2, .delay3, .about-header, .table, .label-170
 
 .one-br {
     padding-bottom: 1em;
+}
+
+.spaces {
+    white-space: pre-wrap;
 }
 
 .index, .toggled, .academics-toggled, .work-toggled {
