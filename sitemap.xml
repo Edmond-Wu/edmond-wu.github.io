@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+<url>
+  <loc>http://the-wuuster.github.io/</loc>
+  <lastmod>2016-07-28T01:28:48+00:00</lastmod>
+</url>
+<url>
+  <loc>http://the-wuuster.github.io/views/about.html</loc>
+  <lastmod>2016-07-28T01:28:48+00:00</lastmod>
+</url>
+<url>
+  <loc>http://the-wuuster.github.io/views/contact.html</loc>
+  <lastmod>2016-07-28T01:28:48+00:00</lastmod>
+</url>
+<url>
+  <loc>http://the-wuuster.github.io/views/projects.html</loc>
+  <lastmod>2016-07-28T01:28:48+00:00</lastmod>
+</url>
+<url>
+  <loc>http://the-wuuster.github.io/views/CS170.html</loc>
+  <lastmod>2016-07-28T01:28:48+00:00</lastmod>
+</url>
+<url>
+  <loc>http://the-wuuster.github.io/index.html</loc>
+  <lastmod>2016-07-28T01:28:48+00:00</lastmod>
+</url>
+<url>
+  <loc>http://the-wuuster.github.io/assets/unity/td.html</loc>
+  <lastmod>2016-07-28T01:28:48+00:00</lastmod>
+</url>
+<url>
+  <loc>http://the-wuuster.github.io/assets/unity/interstellar_shooter.html</loc>
+  <lastmod>2016-07-28T01:28:48+00:00</lastmod>
+</url>
+<url>
+  <loc>http://the-wuuster.github.io/assets/unity/rolling_ball.html</loc>
+  <lastmod>2016-07-28T01:28:48+00:00</lastmod>
+</url>
+</urlset>
