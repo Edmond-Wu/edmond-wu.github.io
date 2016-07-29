@@ -12,6 +12,5 @@ $(document).ready(function () {
     $('.toggle-work').click(function () {
         $('.work-toggled').slideToggle();
     });
-    $(document).foundation();
 });
 

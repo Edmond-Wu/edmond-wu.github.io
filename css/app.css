@@ -16,11 +16,7 @@ body {
     font-family: Montserrat, sans-serif !important;
 }
 
-body, table, .mobile-table, .bar, .black-table {
-    background-color: black;
-}
-
-.top-bar, .dropdown, .menu, .menu-text {
+body, table, .mobile-table, .bar, .black-table, .top-bar, .menu {
     background-color: black !important;
 }
 
@@ -32,14 +28,19 @@ a:hover, .about-header, .label-170 {
     color: #00aced;
 }
 
+.button {
+    border-radius: 5px;
+    padding: 6px !important;
+    background-color: #00aced;
+    font-size: 1em;
+}
+
 h5, p {
     text-align: center;
 }
 
 ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
 }
 
 table, tr, td, tbody, .black-table, .bar, .row {
@@ -110,6 +111,19 @@ h4, h5:hover {
     text-align: left;
 }
 
+.name {
+    font-size: 1.5em;
+}
+
+.larger {
+    font-size: 1.15em;
+}
+
+.nav {
+    padding-top: .125em;
+    font-size: 1.25em;
+}
+
 h1, h2, h3, h4, h5, .delay1, .delay2, .delay3, .about-header, .table, .label-170, .bar {
     font-family: inherit;
 }
@@ -123,7 +137,7 @@ h1, h2, h3, h4, h5, .delay1, .delay2, .delay3, .about-header, .table, .label-170
 }
 
 .pad-right {
-    padding-right: 20px !important;
+    padding-right: 1em !important;
 }
 
 .spaces {
