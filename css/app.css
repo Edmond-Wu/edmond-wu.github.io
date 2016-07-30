@@ -12,12 +12,24 @@
     }
 }
 
-body {
+body, h1, h2, h3, h4, h5, h6, p {
     font-family: Montserrat, sans-serif !important;
 }
 
-body, table, .mobile-table, .bar, .black-table, .top-bar, .menu {
+ul {
+    list-style-type: none;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+body, table, tr, td, .top-bar, .menu {
     background-color: black !important;
+}
+
+table, tr, td {
+    border: 1px solid black !important;
 }
 
 body, a:link, a:visited, h4:hover, .no-hover:hover, .click:hover, .about-header:hover {
@@ -35,97 +47,8 @@ a:hover, .about-header, .label-170 {
     font-size: 1em;
 }
 
-h5, p {
-    text-align: center;
-}
-
-ul {
-    list-style-type: none;
-}
-
-table, tr, td, tbody, .black-table, .bar, .row {
-    border: 1px solid black !important;
-}
-
-table, tr, td, tbody, .black-table, .bar, .row {
-    border-color: black !important;
-}
-
 h4, h5:hover {
     color: #3bc9ff;
-}
-
-.label-170:hover, .about-header:hover {
-    color: #3bc9ff !important;
-}
-
-.profpic {
-    border-radius: 100% !important;
-    max-width: 180px;
-}
-
-.mobile-table, .bar {
-    transition: background-color 0.5s ease;
-    text-decoration: none;
-    font-size: large;
-}
-
-.mobile-table {
-    padding: 3px;
-}
-
-.bar {
-    display: inline;
-    padding: 5px 10px 5px 10px;
-}
-
-.bar:hover, .mobile-table:hover {
-    background-color: white;
-    border-top: 1px solid #777777 !important;
-    border-right: 1px solid #aaaaaa !important;
-    border-bottom: 1px solid #aaaaaa !important;
-    border-left: 1px solid #777777 !important;
-}
-
-.projectsli {
-    text-decoration: none;
-    text-align: center;
-    margin: 15px 0;
-}
-
-.typed {
-    width: 34em;
-    white-space: nowrap;
-    overflow: hidden;
-    -webkit-animation: type 5s steps(50, end);
-    animation: type 5s steps(50, end);
-    font-family: inherit;
-    display: inline-block;
-}
-
-.underline, .about-header {
-    text-decoration: underline;
-}
-
-.black-table {
-    text-align: left;
-}
-
-.name {
-    font-size: 1.5em;
-}
-
-.larger {
-    font-size: 1.15em;
-}
-
-.nav {
-    padding-top: .125em;
-    font-size: 1.25em;
-}
-
-h1, h2, h3, h4, h5, .delay1, .delay2, .delay3, .about-header, .table, .label-170, .bar {
-    font-family: inherit;
 }
 
 .two-brs {
@@ -140,14 +63,70 @@ h1, h2, h3, h4, h5, .delay1, .delay2, .delay3, .about-header, .table, .label-170
     padding-right: 1em !important;
 }
 
+.label-170 {
+    font-size: 1.1em;
+}
+
+.larger {
+    font-size: 1.15em;
+}
+
+.nav {
+    padding-top: .125em;
+    font-size: 1.25em;
+}
+
+.name {
+    font-size: 1.5em;
+}
+
+.hidden {
+    display: none;
+}
+
 .spaces {
     white-space: pre-wrap;
 }
 
-.index, .toggled, .academics-toggled, .work-toggled {
-    display: none;
+.profpic {
+    border-radius: 100% !important;
+    max-width: 180px;
 }
 
-.title, .delay1, .delay2, .delay3 {
-    visibility: hidden;
+.fade {
+    position: absolute;
+    top: auto;
+    left: 0;
+    right: 0;
+}
+
+.fade.ng-enter, .fade.ng-leave {
+    -webkit-transition: all 1.3s ease;
+    transition: all 1.3s ease;
+}
+
+.fade.ng-enter {
+    opacity: 0;
+}
+
+.fade.ng-enter-active {
+    opacity: 1;
+}
+
+.fade.ng-leave {
+    opacity: 1;
+}
+
+.fade.ng-leave-active {
+    opacity: 0;
+}
+
+.typed {
+    width: 34em;
+    white-space: nowrap;
+    overflow: hidden;
+    -webkit-animation: type 5s steps(50, end);
+    animation: type 5s steps(50, end);
+    font-family: inherit;
+    display: inline-block;
 }
