@@ -43,8 +43,12 @@ a:hover, .about-header, .label-170 {
 .button {
     border-radius: 5px;
     padding: 6px !important;
-    background-color: #00aced;
+    background-color: #2199e8;
     font-size: 1em;
+}
+
+.button:hover {
+    background-color: #00aced;
 }
 
 h4, h5:hover {
