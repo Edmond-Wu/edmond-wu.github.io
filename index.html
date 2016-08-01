@@ -23,15 +23,16 @@
     <script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
     <script type="text/javascript" src="bower_components/angular-animate/angular-animate.min.js"></script>
     <script type="text/javascript" src="js/vendor/jquery.min.js" defer></script>
+    <script type="text/javascript" src="js/vendor/foundation.min.js" defer></script>
     <script type="text/javascript" src="js/app.js" defer></script>
 </head>
 <body ng-controller="mainCtrl">
 <!-- Nav bar -->
-<div class="top-bar two-brs">
+<nav class="top-bar two-brs" data-topbar role="navigation">
     <div class="top-bar-left">
         <center>
         <ul class="menu name">
-            <li><a href="#main"><b>Edmond Wu</b> - Developer</a></li>
+            <li class="text-center"><a href="#main"><b>Edmond Wu</b> - Developer</a></li>
         </ul>
         </center>
     </div>
@@ -43,7 +44,7 @@
             <li><a href="#contact" class="button">CONTACT</a></li>
         </ul>
     </div>
-</div>
+</nav>
 <div ng-view class="fade"></div>
 </body>
 </html>
