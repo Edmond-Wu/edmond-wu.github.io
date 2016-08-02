@@ -16,8 +16,8 @@ body, h1, h2, h3, h4, h5, h6, p {
 ul {
     list-style-type: none;
 }
-.underline {
-    text-decoration: underline;
+.black-table {
+    text-align: left;
 }
 body, table, tr, td, .top-bar, .menu {
     background-color: black !important;
@@ -34,11 +34,11 @@ a:hover, .about-header, .label-170 {
 .button {
     border-radius: 5px;
     padding: 6px !important;
-    background-color: #2199e8;
+    background-color: #0095EC;
     font-size: 1em;
 }
 .button:hover {
-    background-color: #00aced;
+    background-color: #007cc5;
 }
 h4, h5:hover {
     color: #3bc9ff;
