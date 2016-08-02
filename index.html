@@ -14,7 +14,7 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
     <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
-    <link rel="stylesheet" href="css/foundation.min.css"/>
+    <link rel="stylesheet" href="bower_components/materialize/dist/css/materialize.min.css">
     <link rel="stylesheet" href="css/app.css"/>
 
     <!-- Javascript -->
@@ -27,24 +27,22 @@
 </head>
 <body ng-controller="mainCtrl">
 <!-- Nav bar -->
-<nav class="top-bar two-brs" data-topbar role="navigation">
-    <div class="top-bar-left">
-        <center>
-        <ul class="menu name">
-            <li class="text-center"><a href="#main"><b>Edmond Wu</b> - Developer</a></li>
-        </ul>
-        </center>
-    </div>
-    <div class="top-bar-right pad-right show-for-medium">
-        <ul class="menu nav">
-            <li><a href="#about">ABOUT</a></li>
-            <li><a href="#projects">PROJECTS</a></li>
-            <li><a href="#cs170">CS170</a></li>
-            <li><a href="#contact" class="button">CONTACT</a></li>
-        </ul>
-    </div>
-</nav>
-<h1 class="hidden text-center">Edmond Wu - Developer</h1>
+<div class="navbar-fixed">
+    <nav>
+        <div class="nav-wrapper black">
+            <a href="#!" class="brand-logo pad-left hide-on-small-and-down"><b>Edmond Wu</b> - Developer</a>
+            <a href="#!" class="brand-logo pad-left hide-on-med-and-up"><b>Edmond Wu</b></a>
+            <ul class="right larger hide-on-med-and-down">
+                <li><a href="#about" class="larger">ABOUT</a></li>
+
+                <li><a href="#projects" class="larger">PROJECTS</a></li>
+                <li><a href="#cs170" class="larger">CS170</a></li>
+                <li><a class="btn waves-effect waves-light larger" href="#contact">CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<h1 class="hidden">Edmond Wu - Developer</h1>
 <div ng-view class="fade"></div>
 </body>
 </html>
