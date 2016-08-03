@@ -48,6 +48,22 @@ a:hover, h4, h5:hover {
 .underline {
     text-decoration: underline;
 }
+.label-170 {
+    font-size: 1.1em;
+}
+.larger {
+    font-size: 1.15em !important;
+}
+.smaller {
+    font-size: 1.4em !important;
+}
+.name {
+    font-size: 1.5em;
+}
+.nav {
+    padding-top: .125em;
+    font-size: 1.25em;
+}
 .two-brs {
     padding-bottom: 2em;
 }
@@ -59,22 +75,6 @@ a:hover, h4, h5:hover {
 }
 .pad-left {
     padding-left: 1em !important;
-}
-.label-170 {
-    font-size: 1.1em;
-}
-.larger {
-    font-size: 1.15em !important;
-}
-.smaller {
-    font-size: 1.4em !important;
-}
-.nav {
-    padding-top: .125em;
-    font-size: 1.25em;
-}
-.name {
-    font-size: 1.5em;
 }
 .spaces {
     white-space: pre-wrap;
