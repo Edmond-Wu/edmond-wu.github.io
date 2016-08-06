@@ -1,8 +1,7 @@
 'use strict';
 
 var app = angular.module("myApp", ['ngRoute', 'ngAnimate']);
-
-app.config(function($routeProvider) {
+app.config(function ($routeProvider) {
     $routeProvider
         .when("/main", {
             templateUrl: "views/main.html",
@@ -27,29 +26,24 @@ app.config(function($routeProvider) {
         .otherwise('/main');
 });
 
-app.controller("mainCtrl", function($scope) {});
-
-app.controller("aboutCtrl", function($scope) {});
-
-app.controller("projectsCtrl", function($scope) {});
-
-app.controller("cs170Ctrl", function($scope) {});
-
-app.controller("contactCtrl", function($scope) {});
-
+app.controller("mainCtrl", function ($scope) {});
+app.controller("aboutCtrl", function ($scope) {});
+app.controller("projectsCtrl", function ($scope) {});
+app.controller("cs170Ctrl", function ($scope) {});
+app.controller("contactCtrl", function ($scope) {});
 
 /**
  * Directive for slide toggle functionality
  */
-app.directive('sliderToggle', function() {
+app.directive('sliderToggle', function () {
     return {
         restrict: 'AE',
-        link: function(scope, element, attrs) {
+        link: function (scope, element, attrs) {
             var target = element.parent()[0].querySelector('[slider]');
             attrs.expanded = false;
-            element.bind('click', function() {
+            element.bind('click', function () {
                 var content = target.querySelector('.slideable_content');
-                if(!attrs.expanded) {
+                if (!attrs.expanded) {
                     content.style.border = '1px solid rgba(0,0,0,0)';
                     var y = content.clientHeight;
                     content.style.border = 0;
@@ -61,10 +55,9 @@ app.directive('sliderToggle', function() {
             });
         }
     }
-});
-app.directive('slider', function () {
+}).directive('slider', function () {
     return {
-        restrict:'A',
+        restrict: 'A',
         compile: function (element, attr) {
             // wrap tag
             var contents = element.html();
@@ -84,4 +77,9 @@ app.directive('slider', function () {
             };
         }
     };
+});
+
+// Initialize collapse button
+$(".button-collapse").sideNav({
+    closeOnClick: true
 });

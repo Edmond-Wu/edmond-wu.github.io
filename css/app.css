@@ -10,6 +10,32 @@
         width: 0;
     }
 }
+@media screen and (max-width: 600px) {
+    .side-nav {
+        top: 56px !important;
+    }
+}
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Material Icons'), local('MaterialIcons-Regular'), url(../assets/icons/material-icon.woff2) format('woff2');
+}
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}
 body, h1, h2, h3, h4, h5, h6, p {
     font-family: Montserrat, sans-serif !important;
 }
@@ -19,7 +45,7 @@ ul {
 .black-table {
     text-align: left;
 }
-body, table, tr, td, .top-bar, .menu {
+body, table, tr, td, .top-bar, .menu, .side-nav {
     background-color: black !important;
 }
 table, tr, td {
@@ -45,6 +71,10 @@ body, a:link, a:visited, h4:hover, .no-hover:hover, .click:hover, .about-header:
 a:hover, h4, h5:hover {
     color: #3bc9ff;
 }
+.side-nav {
+    width: 150px;
+    padding-left: 25px !important;
+}
 .underline {
     text-decoration: underline;
 }
@@ -58,7 +88,7 @@ a:hover, h4, h5:hover {
     font-size: 1.4em !important;
 }
 .name {
-    font-size: 1.5em;
+    font-size: 1.5em !important;
 }
 .nav {
     padding-top: .125em;

@@ -8,12 +8,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description" content="Personal/professional website of Edmond Wu: Rutgers computer science student & aspiring software developer.">
     <meta name="author" content="Edmond Wu">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico"/>
+    <link rel="shortcut icon" type="image/x-icon" href="assets/icons/favicon.ico"/>
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.min.css">
     <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.min.css">
     <link rel="stylesheet" href="bower_components/materialize/dist/css/materialize.min.css">
+    <link rel="stylesheet" href="bower_components/mdi/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="css/app.css"/>
 
     <!-- Javascript -->
@@ -31,12 +32,27 @@
     <nav>
         <div class="nav-wrapper black">
             <a href="#!" class="brand-logo pad-left hide-on-small-and-down"><b>Edmond Wu</b> - Developer</a>
-            <a href="#!" class="brand-logo hide-on-med-and-up"><b>Edmond Wu</b></a>
+            <a href="#!" class="brand-logo pad-left name hide-on-med-and-up"><b>Edmond Wu</b></a>
             <ul class="right larger hide-on-med-and-down">
-                <li><a href="#about" class="larger">ABOUT</a></li>
-                <li><a href="#projects" class="larger">PROJECTS</a></li>
-                <li><a href="#cs170" class="larger">CS170</a></li>
+                <li><a href="#about" class="larger">about</a></li>
+                <li><a href="#projects" class="larger">projects</a></li>
+                <li><a href="#cs170" class="larger">cs170</a></li>
                 <li><a class="btn waves-effect waves-light larger" href="#contact">CONTACT</a></li>
+            </ul>
+            <a href="#" data-activates="mobile-nav" class="pad-left button-collapse"><i class="material-icons">menu</i></a>
+            <ul class="side-nav" id="mobile-nav">
+                <li>
+                    <a href="#about" class="waves-effect">about</a>
+                </li>
+                <li>
+                    <a href="#projects" class="waves-effect">projects</a>
+                </li>
+                <li>
+                    <a href="#cs170" class="waves-effect">cs170</a>
+                </li>
+                <li>
+                    <a href="#contact" class="waves-effect">contact</a>
+                </li>
             </ul>
         </div>
     </nav>
