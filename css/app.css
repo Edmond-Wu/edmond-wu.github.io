@@ -54,9 +54,6 @@ table, tr, td {
 body, a:link, a:visited, h4:hover, .no-hover:hover, .click:hover, .about-header:hover {
     color: white;
 }
-.about-header, .label-170 {
-    color: #00aced;
-}
 .btn {
     color: white !important;
     border-radius: 5px;
@@ -65,15 +62,18 @@ body, a:link, a:visited, h4:hover, .no-hover:hover, .click:hover, .about-header:
     padding-left: 10px;
     padding-right: 10px;
 }
-.btn:hover {
-    background-color: #007cc5 !important;
-}
 a:hover, h4, h5:hover {
     color: #3bc9ff;
 }
+.about-header, .label-170 {
+    color: #00aced;
+}
+.btn:hover {
+    background-color: #007cc5 !important;
+}
 .side-nav {
-    width: 150px;
-    padding-left: 25px !important;
+    width: 110px;
+    padding-left: 10px !important;
 }
 .underline {
     text-decoration: underline;
