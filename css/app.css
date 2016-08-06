@@ -71,11 +71,14 @@ a:hover, h4, h5:hover {
 .btn:hover {
     background-color: #007cc5 !important;
 }
+.underline {
+    text-decoration: underline;
+}
 .side-nav {
     width: 175px;
 }
-.underline {
-    text-decoration: underline;
+.side-nav a {
+    font-size: 18px !important;
 }
 .label-170 {
     font-size: 1.1em;
