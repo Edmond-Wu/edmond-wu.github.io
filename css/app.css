@@ -10,11 +10,6 @@
         width: 0;
     }
 }
-@media screen and (max-width: 600px) {
-    .side-nav {
-        top: 56px !important;
-    }
-}
 @font-face {
     font-family: 'Material Icons';
     font-style: normal;
@@ -107,6 +102,9 @@ a:hover, h4, h5:hover {
 }
 .pad-left {
     padding-left: 1em !important;
+}
+.side-nav {
+    top: 56px !important;
 }
 .spaces {
     white-space: pre-wrap;
