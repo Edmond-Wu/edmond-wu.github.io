@@ -7,7 +7,6 @@
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
-    src: local('Montserrat-Regular');
     src: url(../assets/fonts/MontserratRegular.woff2) format('woff2'),
     url('../assets/fonts/MontserratRegular.woff') format('woff'),
     url('../assets/fonts/MontserratRegular.ttf') format('truetype');
@@ -17,7 +16,6 @@
     font-family: 'Material Icons';
     font-style: normal;
     font-weight: 400;
-    src: local('Material Icons'), local('MaterialIcons-Regular');
     src: url(../assets/icons/MaterialIcons-Regular.woff2) format('woff2'),
     url(../assets/icons/MaterialIcons-Regular.woff) format('woff'),
     url(../assets/icons/MaterialIcons-Regular.ttf) format('truetype');
