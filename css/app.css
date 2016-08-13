@@ -146,7 +146,7 @@ a:hover, h4, h5:hover {
     white-space: nowrap;
     overflow: hidden;
     -webkit-animation: type 5s steps(50, end);
-    animation: type 5s steps(50, end);
+    animation: type 3s steps(50, end);
     font-family: inherit;
     display: inline-block;
 }
