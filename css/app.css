@@ -43,9 +43,6 @@ body, h1, h2, h3, h4, h5, h6, p {
 ul {
     list-style-type: none;
 }
-.black-table {
-    text-align: left;
-}
 body, table, tr, td, .top-bar, .menu, .side-nav {
     background-color: black !important;
 }
