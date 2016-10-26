@@ -6,7 +6,9 @@
 </head>
 <body>
     <h1>Yearly Revenue and Predictions</h1>
+    <!-- Using onchange and onclick as events -->
     <form label="records">
+        <!-- document.getElementById('id').value is better practice than id.value -->
         <p>East Coast: <input type="text" id="east" onchange="document.getElementById('total').value = Number(document.getElementById('east').value) + Number(document.getElementById('west').value);"></p>
         <p>West Coast: <input type="text" id="west" onchange="document.getElementById('total').value = Number(document.getElementById('east').value) + Number(document.getElementById('west').value);"></p>
         <p><b>Total:</b> <input type="text" id="total" readonly></p>
