@@ -1,43 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<title>Basic Event Handling</title>
-	</head>
-	<body>
-		<!-- Give ID's to fields that you might need the value from, like the textboxes -->
-		<p>Fahrenheit: <input type="text" id="fahrenheit"> <button onclick="toCelsius(fahrenheit.value);">To Celsius</button></p>
-		<p>Celsius: <input type="text" id="celsius"> <button onclick="toFahrenheit(celsius.value)">To Fahrenheit</button></p>
-		<script>
-			/**
-			 * Converts the temperature to Celsius
-			 * @param f temperature in Fahrenheit
-			 */
-			function toCelsius(f) {
-				celsius.value = (f - 32) * (5/9);
-			}
-
-			/**
-			 * Converts the temperature to Fahrenheit
-			 * @param c temperature in Celsius
-			 */
-			function toFahrenheit(c) {
-				fahrenheit.value = c * (9/5) + 32;
-			}
-
-			//uncomment these to demo
-			/*
-			var response = prompt("What's your meal plan?") * 1;
-			if (response > 210) {
-				alert("Wow that's a lot");
-			}
-			else if (response >= 150 && response <= 210) {
-				alert("That's a pretty good plan");
-			}
-			else {
-				alert("That's not a lot");
-			}
-			*/
-		</script>
-	</body>
+<head>
+    <meta charset="UTF-8">
+    <title>Generic Company</title>
+</head>
+<body>
+    <h1>Yearly Revenue and Predictions</h1>
+    <form label="records">
+        <p>East Coast: <input type="text" id="east" onchange="document.getElementById('total').value = Number(document.getElementById('east').value) + Number(document.getElementById('west').value);"></p>
+        <p>West Coast: <input type="text" id="west" onchange="document.getElementById('total').value = Number(document.getElementById('east').value) + Number(document.getElementById('west').value);"></p>
+        <p><b>Total:</b> <input type="text" id="total" readonly></p>
+        <input type="radio" name="prediction" id="good" onclick="document.getElementById('estimate').value = 1.25 * Number(document.getElementById('total').value);"> Good year (25%)<br>
+        <input type="radio" name="prediction" id="bad" onclick="document.getElementById('estimate').value = 1.05 * Number(document.getElementById('total').value);"> Bad year (5%)<br>
+        <p><b>Estimate for next year:</b> <input type="text" id="estimate" readonly></p>
+    </form>
+</body>
 </html>

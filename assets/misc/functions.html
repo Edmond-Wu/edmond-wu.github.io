@@ -1,42 +1,43 @@
 <!DOCTYPE html>
-<html>
-  <head>
-	<title>Functions</title>
-    <script>
-		var oscar_winner = prompt("Who won Best Actor this year?");
-		if (oscar_winner != "leonardo" && oscar_winner != "leo" && oscar_winner != "leonardo dicaprio") {
-			alert("Wrong answer");
-		}
-		else {
-			alert("Correct!");
-		}
-		function cToF(celsiusVal) {
-			var fahrenheit = ((9/5) * celsiusVal) + 32;
-			return Math.round(fahrenheit*100)/100;
-		}
-      
-		function fToC(fahrenheitVal) {
-			var celsius = (5/9) * (fahrenheitVal - 32);
-			return Math.round(celsius*100)/100;
-		}
-    
-    </script>
-  </head>
-  
-  <body>
-  
-    <div>
-      <table>
-	  <tr>
-			<td>Celsius:</td>     
-			<td><input type="text" id="cBox" onchange="fBox.value = cToF(Number(cBox.value));" /></td>
-	  </tr>
-      <tr>
-		  <td>Fahrenheit:</td>  
-		  <td><input type="text" id="fBox" onchange="cBox.value = fToC(Number(fBox.value));" /></td>
-	  </tr>
-    </div>
-    
-  </body>
-  
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Basic Event Handling</title>
+	</head>
+	<body>
+		<!-- Give ID's to fields that you might need the value from, like the textboxes -->
+		<p>Fahrenheit: <input type="text" id="fahrenheit"> <button onclick="toCelsius(fahrenheit.value);">To Celsius</button></p>
+		<p>Celsius: <input type="text" id="celsius"> <button onclick="toFahrenheit(celsius.value)">To Fahrenheit</button></p>
+		<script>
+			/**
+			 * Converts the temperature to Celsius
+			 * @param f temperature in Fahrenheit
+			 */
+			function toCelsius(f) {
+				celsius.value = (f - 32) * (5/9);
+			}
+
+			/**
+			 * Converts the temperature to Fahrenheit
+			 * @param c temperature in Celsius
+			 */
+			function toFahrenheit(c) {
+				fahrenheit.value = c * (9/5) + 32;
+			}
+
+			//uncomment these to demo
+			/*
+			var response = prompt("What's your meal plan?") * 1;
+			if (response > 210) {
+				alert("Wow that's a lot");
+			}
+			else if (response >= 150 && response <= 210) {
+				alert("That's a pretty good plan");
+			}
+			else {
+				alert("That's not a lot");
+			}
+			*/
+		</script>
+	</body>
 </html>
