@@ -2,19 +2,19 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>Basic Event Handling</title>
+		<title>Temperature Functions</title>
 	</head>
 	<body>
 		<!-- Give ID's to fields that you might need the value from, like the textboxes -->
-		<p>Fahrenheit: <input type="text" id="fahrenheit"> <button onclick="toCelsius(fahrenheit.value);">To Celsius</button></p>
-		<p>Celsius: <input type="text" id="celsius"> <button onclick="toFahrenheit(celsius.value)">To Fahrenheit</button></p>
+		<p>Fahrenheit: <input type="text" id="fahrenheit"> <button onclick="toCelsius(document.getElementById('fahrenheit').value);">To Celsius</button></p>
+		<p>Celsius: <input type="text" id="celsius"> <button onclick="toFahrenheit(document.getElementById('celsius').value)">To Fahrenheit</button></p>
 		<script>
 			/**
 			 * Converts the temperature to Celsius
 			 * @param f temperature in Fahrenheit
 			 */
 			function toCelsius(f) {
-				celsius.value = (f - 32) * (5/9);
+				document.getElementById('celsius').value = (f - 32) * (5/9);
 			}
 
 			/**
@@ -22,7 +22,7 @@
 			 * @param c temperature in Celsius
 			 */
 			function toFahrenheit(c) {
-				fahrenheit.value = c * (9/5) + 32;
+				document.getElementById('fahrenheit').value = c * (9/5) + 32;
 			}
 
 			//uncomment these to demo
