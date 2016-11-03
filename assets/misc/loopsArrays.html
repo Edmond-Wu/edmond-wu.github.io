@@ -5,18 +5,22 @@
 	</head>
 	<body>
 	<script>
+		//array creation
 		var list = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20];
 		var list2 = new Array("Finance", "Accounting", "Supply Chain", "Management");
 
+		//accessing elements from arrays
 		var second_value = list[1];
 		list[5] = second_value;
 
+		//using for-loop to sum all elements in the array
 		var sum = 0;
 		for (var i = 0; i < list.length; i++) {
 			sum += list[i];
 		}
 		document.write(sum + "<br>");
 
+		//finding the largest element in an array
 		var largest = list[0];
 		for (var j = 0; j < list.length; j++) {
 			if (list[j] > largest) {
@@ -25,6 +29,7 @@
 		}
 		document.write(largest + "<br>");
 
+		//writing out contents of the array
 		var x = 0;
 		while (x < list2.length) {
 			document.write(list2[x] + "<br>");
