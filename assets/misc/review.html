@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exam 2 Review</title>
+</head>
+<body>
+    <h1>Exam Review</h1>
+    <input type="text" id="lineResult" readonly placeholder="f(x) = mx + b">
+    <script>
+        /*
+        new line: \n
+        and: &&
+        comparison: ==
+        or: ||
+        greater than or equal to: >=
+        not equal: !=
+        statement terminator: ;
+        assignment: =
+         */
+
+        //comment or uncomment to demonstrate code snippets
+        var mX = 2;
+        var mY = 4;
+        var b = 1;
+        var x = 1;
+
+        function linearEquation(mY, mX, b, x) {
+            var answer = (mY / mX) * x + b;
+            return answer;
+        }
+
+        var valA = linearEquation(mY, mX, b, x);
+        document.getElementById('lineResult').value = valA; //lineResult.value = valA;
+
+        /*
+        var x = 5;
+        var y = 6;
+        var w = 7;
+        var z = 8;
+
+        function someFunction(a, b, c) {
+            x = a + b;
+            x = 0;
+            b = b - 1;
+            someOtherFunction(2, b, 1);
+        }
+
+        function someOtherFunction(a, b, c) {
+            var z = a + c;
+            w = z;
+            x = x - b;
+        }
+
+        someFunction(x, y, z);
+        alert(x + " " + y + " " + z);
+         */
+
+        /*
+        var valueA = 5;
+        var valueB = 6;
+
+        function someFunc(a, b) {
+            var valueA = 4;
+            var valueC = 3;
+            valueB = valueA + valueB;
+            valueC = 3;
+            return valueC + valueA;
+        }
+
+        valueA = someFunc(valueA, 3);
+        alert(valueA + " " + valueB);
+        //global: outside function, local: inside function
+         */
+
+        //RAM: random access memory
+    </script>
+</body>
+</html>
