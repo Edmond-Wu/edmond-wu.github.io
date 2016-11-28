@@ -69,9 +69,6 @@ a:hover, h4, h5:hover {
 .btn:hover {
     background-color: #007cc5 !important;
 }
-.underline {
-    text-decoration: underline;
-}
 .side-nav {
     width: 175px;
 }
