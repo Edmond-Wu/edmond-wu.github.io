@@ -3,32 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>Intro to Javascript</title>
+    <style>
+        body {
+            font-family: Calibri;
+            background-color: pink;
+            color: red;
+        }
+        h1 {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <h1>Intro to Javascript</h1>
     <script>
-        alert("Rutgers football is terrible");
-
-        //variable declaration and initialization
-        var year;
-        year = 2016;
-
-        //can declare and initialize in one line
-        var candidate = "hillary clinton";
-        alert(candidate + " " + year);
-
-        //can change value of variables after initialization
-        year = 2017;
-
-        //using javascript to calculate a bill with tax rate 7%
-        var bill = 10;
-        var taxRate = .07;
-
-        //use parentheses to perform calculations when a string is involved
-        alert("Total bill is: " + (bill * (taxRate + 1)));
-
-        //store user answer in a variable
-        var response = prompt("Do you think Rutgers football is good?");
+        alert("This is an alert!");
+        var tax; //variable declaration
+        tax = 1.07; //variable initialization
+        var cost = 8;
+        var response = 1 * prompt("How many items do you want?"); //multiply by 1 to convert to number
+        var total = cost * response * tax;
+        alert("Total is: " + total);
     </script>
 </body>
 </html>
