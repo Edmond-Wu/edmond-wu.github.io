@@ -22,7 +22,22 @@
         tax = 1.07; //variable initialization
         var cost = 8;
         var response = 1 * prompt("How many items do you want?"); //multiply by 1 to convert to number
-        var total = cost * response * tax;
+        //if statement discounts
+        var discount;
+        if (response <= 1) {
+            discount = 0;
+        }
+        else if (response == 2) {
+            discount = .1;
+        }
+        else if (response == 3) {
+            discount = .2;
+        }
+        else {
+            discount = .4;
+        }
+        //total calculation
+        var total = (cost * response) * (1 - discount) * tax;
         alert("Total is: " + total);
     </script>
 </body>
