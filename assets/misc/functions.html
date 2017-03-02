@@ -5,16 +5,22 @@
 		<title>Temperature Functions</title>
 	</head>
 	<body>
+		<h1>Temperature Functions</h1>
 		<!-- Give ID's to fields that you might need the value from, like the textboxes -->
-		<p>Fahrenheit: <input type="text" id="fahrenheit"> <button onclick="toCelsius(document.getElementById('fahrenheit').value);">To Celsius</button></p>
-		<p>Celsius: <input type="text" id="celsius"> <button onclick="toFahrenheit(document.getElementById('celsius').value)">To Fahrenheit</button></p>
+		<p>Fahrenheit: <input type="text" id="fahrenheit"></p>
+		<p>Celsius: <input type="text" id="celsius" readonly></p>
+		<button onclick="celsius.value = toCelsius(Number(fahrenheit.value));">Convert to Celsius</button>
+		<hr>
+		<p>Celsius: <input type="text" id="cel" onchange="fah.value = toFahrenheit(Number(cel.value));"></p>
+		<p>Fahrenheit: <input type="text" id="fah" readonly></p>
 		<script>
 			/**
 			 * Converts the temperature to Celsius
 			 * @param f temperature in Fahrenheit
 			 */
 			function toCelsius(f) {
-				document.getElementById('celsius').value = (f - 32) * (5/9);
+				var celsius = (f - 32) * (5/9);
+				return celsius;
 			}
 
 			/**
@@ -22,22 +28,9 @@
 			 * @param c temperature in Celsius
 			 */
 			function toFahrenheit(c) {
-				document.getElementById('fahrenheit').value = c * (9/5) + 32;
+				var fahrenheit = c * (9/5) + 32;
+				return fahrenheit;
 			}
-
-			//uncomment these to demo
-			/*
-			var response = prompt("What's your meal plan?") * 1;
-			if (response > 210) {
-				alert("Wow that's a lot");
-			}
-			else if (response >= 150 && response <= 210) {
-				alert("That's a pretty good plan");
-			}
-			else {
-				alert("That's not a lot");
-			}
-			*/
 		</script>
 	</body>
 </html>
