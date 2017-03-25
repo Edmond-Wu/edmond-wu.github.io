@@ -7,34 +7,37 @@
 	<script>
 		//array creation
 		var list = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20];
-		var list2 = new Array("Finance", "Accounting", "Supply Chain", "Management");
+		var movies = new Array("Logan", "La La Land", "Get Out", "Moana", "Moonlight");
 
-		//accessing elements from arrays
-		var second_value = list[1];
-		list[5] = second_value;
+		//accessing elements
+		var movieChoice = movies[2];
+		movies[3] = "Inside Out";
 
-		//using for-loop to sum all elements in the array
-		var sum = 0;
-		for (var i = 0; i < list.length; i++) {
-			sum += list[i];
+		//for loop to write out the contents of movies
+		for (var i = 0; i < movies.length; i++) {
+			document.write(movies[i] + "<br>");
 		}
-		document.write(sum + "<br>");
 
-		//finding the largest element in an array
-		var largest = list[0];
-		for (var j = 0; j < list.length; j++) {
-			if (list[j] > largest) {
-				largest = list[j];
+		//finding average of list
+		var sum = list[0];
+		for (var j = 1; j < list.length; j++) {
+			sum += list[j];
+		}
+		var average = sum / list.length;
+		alert("Average is: " + average);
+
+		//finding range of list
+		var lowest = list[0], highest = list[0];
+		for (var k = 1; k < list.length; k++) {
+			if (list[k] > highest) {
+				highest = list[k];
+			}
+			if (list[k] < lowest) {
+				lowest = list[k];
 			}
 		}
-		document.write(largest + "<br>");
-
-		//writing out contents of the array, using while loop instead
-		var x = 0;
-		while (x < list2.length) {
-			document.write(list2[x] + "<br>");
-			x++;
-		}
+		var range = highest - lowest;
+		alert("Range is: " + range);
 	</script>
 	</body>
 </html>
