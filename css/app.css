@@ -37,11 +37,14 @@
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-feature-settings: 'liga';
 }
+a:hover, h4, h5:hover {
+    color: #3bc9ff;
+}
+body, a:link, a:visited, h4:hover, .no-hover:hover, .click:hover, .about-header:hover {
+    color: white;
+}
 body, h1, h2, h3, h4, h5, h6, p {
     font-family: Montserrat, sans-serif !important;
-}
-ul {
-    list-style-type: none;
 }
 body, table, tr, td, .top-bar, .menu, .side-nav {
     background-color: black !important;
@@ -49,8 +52,11 @@ body, table, tr, td, .top-bar, .menu, .side-nav {
 table, tr, td {
     border: 1px solid black !important;
 }
-body, a:link, a:visited, h4:hover, .no-hover:hover, .click:hover, .about-header:hover {
-    color: white;
+ul {
+    list-style-type: none;
+}
+.about-header, .label-170 {
+    color: #00aced;
 }
 .btn {
     color: white !important;
@@ -60,58 +66,8 @@ body, a:link, a:visited, h4:hover, .no-hover:hover, .click:hover, .about-header:
     padding-left: 10px;
     padding-right: 10px;
 }
-a:hover, h4, h5:hover {
-    color: #3bc9ff;
-}
-.about-header, .label-170 {
-    color: #00aced;
-}
 .btn:hover {
     background-color: #007cc5 !important;
-}
-.side-nav {
-    width: 175px;
-}
-.side-nav a {
-    font-size: 18px !important;
-}
-.label-170 {
-    font-size: 1.1em;
-}
-.larger {
-    font-size: 1.15em !important;
-}
-.smaller {
-    font-size: 1.35em !important;
-}
-.name {
-    font-size: 1.5em !important;
-}
-.nav {
-    padding-top: .125em;
-    font-size: 1.25em;
-}
-.two-brs {
-    padding-bottom: 2em;
-}
-.one-br {
-    padding-bottom: 1em;
-}
-.pad-right {
-    padding-right: 1em !important;
-}
-.pad-left {
-    padding-left: 1em !important;
-}
-.side-nav {
-    top: 56px !important;
-}
-.spaces {
-    white-space: pre-wrap;
-}
-.profpic {
-    border-radius: 100% !important;
-    max-width: 180px;
 }
 .fade {
     position: absolute;
@@ -135,6 +91,54 @@ a:hover, h4, h5:hover {
 .fade.ng-leave-active {
     opacity: 0;
 }
+.hidden {
+    display: none;
+}
+.label-170 {
+    font-size: 1.1em;
+}
+.larger {
+    font-size: 1.15em !important;
+}
+.left-text {
+    text-align: left;
+}
+.name {
+    font-size: 1.5em !important;
+}
+.nav {
+    padding-top: .125em;
+    font-size: 1.25em;
+}
+.one-br {
+    padding-bottom: 1em;
+}
+.pad-left {
+    padding-left: 1em !important;
+}
+.pad-right {
+    padding-right: 1em !important;
+}
+.profpic {
+    border-radius: 100% !important;
+    max-width: 180px;
+}
+.side-nav {
+    top: 56px !important;
+    width: 165px;
+}
+.side-nav a {
+    font-size: 18px !important;
+}
+.smaller {
+    font-size: 1.35em !important;
+}
+.spaces {
+    white-space: pre-wrap;
+}
+.two-brs {
+    padding-bottom: 2em;
+}
 .typed {
     width: 34em;
     white-space: nowrap;
@@ -143,7 +147,4 @@ a:hover, h4, h5:hover {
     animation: type 3s steps(50, end);
     font-family: inherit;
     display: inline-block;
-}
-.hidden {
-    display: none;
 }
