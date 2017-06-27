@@ -52,9 +52,6 @@ body, table, tr, td, .top-bar, .menu, .side-nav {
 table, tr, td {
     border: 1px solid black !important;
 }
-ul {
-    list-style-type: none;
-}
 .about-header, .label-170 {
     color: #00aced;
 }
@@ -90,6 +87,9 @@ ul {
 }
 .fade.ng-leave-active {
     opacity: 0;
+}
+.half-br {
+    padding-bottom: 0.5em;
 }
 .hidden {
     display: none;
