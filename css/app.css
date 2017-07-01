@@ -136,6 +136,9 @@ table, tr, td {
 .spaces {
     white-space: pre-wrap;
 }
+.five-brs-above{
+    padding-top: 5em;
+}
 .two-brs {
     padding-bottom: 2em;
 }
