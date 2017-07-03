@@ -73,8 +73,8 @@ table, tr, td {
     right: 0;
 }
 .fade.ng-enter, .fade.ng-leave {
-    -webkit-transition: all 1.3s ease;
-    transition: all 1.3s ease;
+    -webkit-transition: all 1.5s ease;
+    transition: all 1.5s ease;
 }
 .fade.ng-enter {
     opacity: 0;
