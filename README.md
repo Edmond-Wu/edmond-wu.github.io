@@ -1,5 +1,5 @@
 # the-wuuster.github.io
-Personal/professional website containing basic personal information, contact information, projects, and resources for the course I TA for.
+Personal/professional website of Edmond Wu. Contains basic personal information, contact information, various projects I've worked on, and resources for the Rutgers University course "Computer Applications for Business".
 
 ## Technologies used
-AngularJS single-page, static application styled with Materialize CSS. Animated with Angular-Animate and a slider directive.
+AngularJS single-page, static application. Styled with Materialize CSS and animated with Angular-Animate with a slider directive. Mobile navigation bar done using jQuery.
