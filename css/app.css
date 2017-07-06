@@ -123,6 +123,9 @@ table, tr, td {
     border-radius: 100% !important;
     max-width: 180px;
 }
+.seven-brs-above{
+    padding-top: 7em;
+}
 .side-nav {
     top: 56px !important;
     width: 165px;
@@ -135,9 +138,6 @@ table, tr, td {
 }
 .spaces {
     white-space: pre-wrap;
-}
-.five-brs-above{
-    padding-top: 5em;
 }
 .two-brs {
     padding-bottom: 2em;
