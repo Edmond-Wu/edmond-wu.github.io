@@ -37,10 +37,10 @@
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-feature-settings: 'liga';
 }
-a:hover, h4, h5:hover {
-    color: #3bc9ff;
+a:hover {
+    color: #3bc9ff !important;
 }
-body, a:link, a:visited, h4:hover, .no-hover:hover, .click:hover, .about-header:hover {
+body, a:link, a:visited, .click:hover {
     color: white;
 }
 body, h1, h2, h3, h4, h5, h6, p {
@@ -52,7 +52,7 @@ body, table, tr, td, .top-bar, .menu, .side-nav {
 table, tr, td {
     border: 1px solid black !important;
 }
-.about-header, .label-170 {
+.label-170 {
     color: #00aced;
 }
 .btn {
