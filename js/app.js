@@ -79,7 +79,7 @@ app.directive('sliderToggle', function () {
     };
 });
 
-// Initialize collapse button
+/* Initialize collapse button for mobile nav-bar */
 $(".button-collapse").sideNav({
     closeOnClick: true
 });
