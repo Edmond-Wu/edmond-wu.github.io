@@ -26,11 +26,26 @@ app.config(function ($routeProvider) {
         .otherwise('/home');
 });
 
-app.controller("homeCtrl", function ($scope) {});
-app.controller("aboutCtrl", function ($scope) {});
-app.controller("projectsCtrl", function ($scope) {});
-app.controller("cs170Ctrl", function ($scope) {});
-app.controller("contactCtrl", function ($scope) {});
+app.controller("homeCtrl", function ($scope) {
+  ga('set', 'page', '/home.html');
+  ga('send', 'pageview');
+});
+app.controller("aboutCtrl", function ($scope) {
+  ga('set', 'page', '/about.html');
+  ga('send', 'pageview');
+});
+app.controller("projectsCtrl", function ($scope) {
+  ga('set', 'page', '/projects.html');
+  ga('send', 'pageview');
+});
+app.controller("cs170Ctrl", function ($scope) {
+  ga('set', 'page', '/cs170.html');
+  ga('send', 'pageview');
+});
+app.controller("contactCtrl", function ($scope) {
+  ga('set', 'page', '/contact.html');
+  ga('send', 'pageview');
+});
 
 /**
  * Directive for slide toggle functionality
