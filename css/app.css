@@ -136,9 +136,6 @@ table, tr, td {
 .smaller {
     font-size: 1.35em !important;
 }
-.spaces {
-    white-space: pre-wrap;
-}
 .two-brs {
     padding-bottom: 2em;
 }
