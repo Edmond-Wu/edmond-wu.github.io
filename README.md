@@ -1,4 +1,4 @@
-# the-wuuster.github.io
+# edmond-wu.github.io
 My personal/professional website. Contains basic personal information, contact information, various projects I've worked on, and resources for the Rutgers University course "Computer Applications for Business".
 
 ## Technologies used
