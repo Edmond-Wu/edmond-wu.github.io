@@ -27,24 +27,24 @@ app.config(function ($routeProvider) {
 });
 
 app.controller("homeCtrl", function ($scope) {
-  ga('set', 'page', '/home.html');
-  ga('send', 'pageview');
+  //ga('set', 'page', '/home.html');
+  //ga('send', 'pageview');
 });
 app.controller("aboutCtrl", function ($scope) {
-  ga('set', 'page', '/about.html');
-  ga('send', 'pageview');
+  //ga('set', 'page', '/about.html');
+  //ga('send', 'pageview');
 });
 app.controller("projectsCtrl", function ($scope) {
-  ga('set', 'page', '/projects.html');
-  ga('send', 'pageview');
+  //ga('set', 'page', '/projects.html');
+  //ga('send', 'pageview');
 });
 app.controller("cs170Ctrl", function ($scope) {
-  ga('set', 'page', '/cs170.html');
-  ga('send', 'pageview');
+  //ga('set', 'page', '/cs170.html');
+  //ga('send', 'pageview');
 });
 app.controller("contactCtrl", function ($scope) {
-  ga('set', 'page', '/contact.html');
-  ga('send', 'pageview');
+  //ga('set', 'page', '/contact.html');
+  //ga('send', 'pageview');
 });
 
 /**
