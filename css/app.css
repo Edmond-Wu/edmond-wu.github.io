@@ -88,6 +88,9 @@ table, tr, td {
 .fade.ng-leave-active {
     opacity: 0;
 }
+.five-brs {
+    padding-bottom: 5em;
+}
 .half-br {
     padding-bottom: 0.5em;
 }
@@ -102,6 +105,9 @@ table, tr, td {
 }
 .left-text {
     text-align: left;
+}
+.much-larger {
+    font-size: 1.4em !important;
 }
 .name {
     font-size: 1.5em !important;
@@ -121,7 +127,7 @@ table, tr, td {
 }
 .profpic {
     border-radius: 100% !important;
-    max-width: 180px;
+    max-width: 225px;
 }
 .seven-brs-above{
     padding-top: 7em;
