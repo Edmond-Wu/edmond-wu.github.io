@@ -1,58 +1,61 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="myApp" class="no-js">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Edmond Wu - Developer</title>
+  <meta charset="UTF-8">
+  <title>Edmond Wu - Developer</title>
 
-    <!-- Meta Tags & Favicon-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
-    <meta name="description" content="Personal website of Edmond Wu: Rutgers University graduate and software engineer.">
-    <meta name="author" content="Edmond Wu">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/icons/favicon.ico"/>
+  <!-- Meta Tags & Favicon-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <meta name="description" content="Personal website of Edmond Wu: Rutgers University graduate and software engineer.">
+  <meta name="author" content="Edmond Wu">
+  <link rel="shortcut icon" type="image/x-icon" href="assets/icons/favicon.ico" />
 
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.min.css">
-    <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.min.css">
-    <link rel="stylesheet" href="bower_components/materialize/dist/css/materialize.min.css">
-    <link rel="stylesheet" href="bower_components/mdi/css/materialdesignicons.min.css">
-    <link rel="stylesheet" href="css/app.css"/>
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.min.css">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.min.css">
+  <link rel="stylesheet" href="bower_components/materialize/dist/css/materialize.min.css">
+  <link rel="stylesheet" href="bower_components/mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="css/app.min.css" />
 
-    <!-- Javascript -->
-    <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js" defer></script>
-    <script type="text/javascript" src="bower_components/angular/angular.min.js" defer></script>
-    <script type="text/javascript" src="bower_components/angular-route/angular-route.min.js" defer></script>
-    <script type="text/javascript" src="bower_components/angular-animate/angular-animate.min.js" defer></script>
-    <script type="text/javascript" src="js/vendor/jquery.min.js" defer></script>
-    <script type="text/javascript" src="bower_components/materialize/dist/js/materialize.min.js" defer></script>
-    <!-- <script type="text/javascript" src="js/analytics.js" defer></script> -->
-    <script type="text/javascript" src="js/app.js" defer></script>
+  <!-- Javascript -->
+  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js" defer></script>
+  <script type="text/javascript" src="bower_components/angular/angular.min.js" defer></script>
+  <script type="text/javascript" src="bower_components/angular-route/angular-route.min.js" defer></script>
+  <script type="text/javascript" src="bower_components/angular-animate/angular-animate.min.js" defer></script>
+  <script type="text/javascript" src="js/vendor/jquery.min.js" defer></script>
+  <script type="text/javascript" src="bower_components/materialize/dist/js/materialize.min.js" defer></script>
+  <!-- <script type="text/javascript" src="js/analytics.js" defer></script> -->
+  <script type="text/javascript" src="js/app.js" defer></script>
 </head>
-<body ng-controller="homeCtrl">
-<!-- Nav bar -->
-<div class="navbar-fixed">
+
+<body ng-controller="aboutCtrl">
+  <!-- Nav bar -->
+  <div class="navbar-fixed">
     <nav>
-        <div class="nav-wrapper black">
-            <a href="#!" class="brand-logo pad-left hide-on-med-and-down waves-effect"><i class="mdi mdi-code-not-equal-variant"></i>Edmond Wu - Developer</a>
-            <a href="#!" class="brand-logo hide-on-small-and-down hide-on-large-only waves-effect"><i class="mdi mdi-code-not-equal-variant"></i>Edmond Wu</a>
-            <a href="#!" class="brand-logo pad-left name hide-on-med-and-up waves-effect">Edmond Wu</a>
-            <ul class="right larger hide-on-med-and-down">
-                <li><a href="#!about" class="larger waves-effect">about</a></li>
-                <li><a href="#!projects" class="larger waves-effect">projects</a></li>
-                <li><a href="#!cs170" class="larger waves-effect">cs170</a></li>
-                <li><a href="#!contact" class="btn waves-effect waves-light larger">CONTACT</a></li>
-            </ul>
-            <a href="#" data-activates="mobile-nav" class="pad-left button-collapse waves-effect"><i class="material-icons">menu</i></a>
-            <ul class="side-nav" id="mobile-nav">
-                <li><a href="#!about" class="waves-effect center">about</a></li>
-                <li><a href="#!projects" class="waves-effect center">projects</a></li>
-                <li><a href="#!cs170" class="waves-effect center">cs170</a></li>
-                <li><a href="#!contact" class="waves-effect center">contact</a></li>
-            </ul>
-        </div>
+      <div class="nav-wrapper black">
+        <a href="#!" class="brand-logo pad-left hide-on-small-and-down waves-effect"><i class="mdi mdi-code-not-equal-variant"></i>Edmond Wu</a>
+        <a href="#!" class="brand-logo pad-left name hide-on-med-and-up waves-effect">Edmond Wu</a>
+        <ul class="right larger hide-on-med-and-down">
+          <li><a href="#!about" class="larger waves-effect">about</a></li>
+          <li><a href="#!projects" class="larger waves-effect">projects</a></li>
+          <li><a href="#!cs170" class="larger waves-effect">cs170</a></li>
+          <li><a href="assets/pdfs/resume2017.pdf" target="_blank" class="larger waves-effect">resume</a></li>
+          <li><a href="#!contact" class="btn waves-effect waves-light larger">CONTACT</a></li>
+        </ul>
+        <a href="#" data-activates="mobile-nav" class="pad-left button-collapse waves-effect"><i class="material-icons">menu</i></a>
+        <ul class="side-nav" id="mobile-nav">
+          <li><a href="#!about" class="waves-effect center">about</a></li>
+          <li><a href="#!projects" class="waves-effect center">projects</a></li>
+          <li><a href="#!cs170" class="waves-effect center">cs170</a></li>
+          <li><a href="assets/pdfs/resume2017.pdf" target="_blank" class="waves-effect center">resume</a></li>
+          <li><a href="#!contact" class="waves-effect center">contact</a></li>
+        </ul>
+      </div>
     </nav>
-</div>
-<h1 class="hidden">Edmond Wu - Developer</h1>
-<!-- display views -->
-<div ng-view class="fade"></div>
+  </div>
+  <h1 class="hidden">Edmond Wu - Developer</h1>
+  <!-- display views -->
+  <div ng-view class="fade"></div>
 </body>
 </html>
