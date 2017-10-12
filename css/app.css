@@ -38,7 +38,7 @@
 }
 
 a:hover {
-  color: #3bc9ff !important;
+  color: #05E9FF !important;
 }
 
 body, a:link, a:visited, .click:hover {
@@ -62,16 +62,14 @@ table, tr, td {
 }
 
 .btn {
-  color: white !important;
   border-radius: 5px;
-  background-color: #0095EC !important;
   font-size: 1em;
   padding-left: 10px;
   padding-right: 10px;
 }
 
 .btn:hover {
-  background-color: #007cc5 !important;
+  opacity: 0.85;
 }
 
 .fade {
