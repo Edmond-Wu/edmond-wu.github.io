@@ -106,6 +106,10 @@ table, tr, td {
   padding-bottom: 5em;
 }
 
+.five-brs-above {
+  padding-top: 5em;
+}
+
 .half-br {
   padding-bottom: 0.5em;
 }
@@ -158,10 +162,6 @@ table, tr, td {
 .profpic {
   border-radius: 100% !important;
   max-width: 225px;
-}
-
-.seven-brs-above {
-  padding-top: 7em;
 }
 
 .side-nav {
