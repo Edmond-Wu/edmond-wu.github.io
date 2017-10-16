@@ -1,0 +1,24 @@
+{
+  "name": "edmond-wu.github.io",
+  "version": "1.0.0",
+  "description": "Persona/professional website of Edmond Wu",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Edmond-Wu/edmond-wu.github.io.git"
+  },
+  "author": "Edmond Wu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Edmond-Wu/edmond-wu.github.io/issues"
+  },
+  "homepage": "https://github.com/Edmond-Wu/edmond-wu.github.io#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1"
+  }
+}
