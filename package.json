@@ -18,7 +18,7 @@
   "homepage": "https://github.com/Edmond-Wu/edmond-wu.github.io#readme",
   "dependencies": {},
   "devDependencies": {
-    "gulp": "^3.9.1",
+    "gulp": "github:gulpjs/gulp#4.0",
     "gulp-clean-css": "^3.9.0",
     "gulp-concat": "^2.6.1",
     "gulp-minify": "^1.0.0",
