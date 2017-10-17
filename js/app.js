@@ -22,22 +22,10 @@ app.config(function($routeProvider) {
     .otherwise('/about');
 });
 
-app.controller("aboutCtrl", function($scope) {
-  //ga('set', 'page', '/about.html');
-  //ga('send', 'pageview');
-});
-app.controller("projectsCtrl", function($scope) {
-  //ga('set', 'page', '/projects.html');
-  //ga('send', 'pageview');
-});
-app.controller("cs170Ctrl", function($scope) {
-  //ga('set', 'page', '/cs170.html');
-  //ga('send', 'pageview');
-});
-app.controller("contactCtrl", function($scope) {
-  //ga('set', 'page', '/contact.html');
-  //ga('send', 'pageview');
-});
+app.controller("aboutCtrl", function($scope) {});
+app.controller("projectsCtrl", function($scope) {});
+app.controller("cs170Ctrl", function($scope) {});
+app.controller("contactCtrl", function($scope) {});
 
 /**
  * Directive for slide toggle functionality
@@ -66,11 +54,11 @@ app.directive('sliderToggle', function() {
   return {
     restrict: 'A',
     compile: function(element, attr) {
-      // wrap tag
+      /* wrap tag */
       var contents = element.html();
       element.html('<div class="slideable_content" style="margin:0 !important; padding:0 !important" >' + contents + '</div>');
       return function postLink(scope, element, attrs) {
-        // default properties
+        /* default properties */
         attrs.duration = (!attrs.duration) ? '.6s' : attrs.duration;
         attrs.easing = (!attrs.easing) ? 'ease-in-out' : attrs.easing;
         element.css({
