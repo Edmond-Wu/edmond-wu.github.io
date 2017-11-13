@@ -1,7 +1,7 @@
 {
   "name": "edmond-wu.github.io",
   "version": "1.0.0",
-  "description": "Persona/professional website of Edmond Wu",
+  "description": "Personal/professional website of Edmond Wu",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
