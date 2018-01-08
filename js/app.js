@@ -7,6 +7,10 @@ app.config(function($routeProvider) {
       templateUrl: 'views/about.html',
       controller: 'aboutCtrl'
     })
+    .when('/skills', {
+      templateUrl: 'views/skills.html',
+      controller: 'skillsCtrl'
+    })
     .when('/projects', {
       templateUrl: 'views/projects.html',
       controller: 'projectsCtrl'
@@ -23,6 +27,7 @@ app.config(function($routeProvider) {
 });
 
 app.controller("aboutCtrl", function($scope) {});
+app.controller("skillsCtrl", function($scope) {});
 app.controller("projectsCtrl", function($scope) {});
 app.controller("cs170Ctrl", function($scope) {});
 app.controller("contactCtrl", function($scope) {});
