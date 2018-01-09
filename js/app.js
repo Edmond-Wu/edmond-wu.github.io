@@ -27,7 +27,11 @@ app.config(function($routeProvider) {
 });
 
 app.controller("aboutCtrl", function($scope) {});
-app.controller("skillsCtrl", function($scope) {});
+app.controller("skillsCtrl", function($scope) {
+  $scope.languages = ["Java", "HTML/CSS", "Javascript", "Python", "C", "C#"];
+  $scope.frameworks = ["angularJS", "jQuery", "Bootstrap", "Materialize", "Foundation", "NodeJS"];
+  $scope.tools = ["Ubuntu", "Redhat Enterprise", "Unity3D engine", "Git", "Subversion/SVN"];
+});
 app.controller("projectsCtrl", function($scope) {});
 app.controller("cs170Ctrl", function($scope) {});
 app.controller("contactCtrl", function($scope) {});
