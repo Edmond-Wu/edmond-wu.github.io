@@ -26,6 +26,9 @@ app.config(function($routeProvider) {
     .otherwise('/about');
 });
 
+/**
+ * View controllers
+ */
 app.controller("aboutCtrl", function($scope) {});
 app.controller("skillsCtrl", function($scope) {
   $scope.languages = ["Java", "HTML/CSS", "Javascript", "Python", "C", "C#"];

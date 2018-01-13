@@ -8,6 +8,10 @@ app.config(function($routeProvider) {
       templateUrl: 'views/about.html',
       controller: 'aboutCtrl'
     })
+    .when('/skills', {
+      templateUrl: 'views/skills.html',
+      controller: 'skillsCtrl'
+    })
     .when('/projects', {
       templateUrl: 'views/projects.html',
       controller: 'projectsCtrl'
@@ -23,7 +27,15 @@ app.config(function($routeProvider) {
     .otherwise('/about');
 });
 
+/**
+ * View controllers
+ */
 app.controller("aboutCtrl", function($scope) {});
+app.controller("skillsCtrl", function($scope) {
+  $scope.languages = ["Java", "HTML/CSS", "Javascript", "Python", "C", "C#"];
+  $scope.frameworks = ["angularJS", "jQuery", "Bootstrap", "Materialize", "Foundation", "NodeJS"];
+  $scope.tools = ["Ubuntu", "Redhat Enterprise", "Unity3D engine", "Git", "Subversion/SVN"];
+});
 app.controller("projectsCtrl", function($scope) {});
 app.controller("cs170Ctrl", function($scope) {});
 app.controller("contactCtrl", function($scope) {});
