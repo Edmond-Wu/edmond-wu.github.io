@@ -1,0 +1,45 @@
+<div class="container center">
+  <h1><img src="assets/images/skills.png" class="responsive-img" title="Skills" alt="skills title logo"></h1>
+  <div class="row">
+    <div class="s12 col">
+      <h4>Languages:</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div data-ng-repeat="item in languages">
+      <div class="s12 m4 col">
+        <div class="card larger blue">
+          {{item}}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="s12 col">
+      <h4>Frameworks/Libraries:</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div data-ng-repeat="item in frameworks">
+      <div class="s12 m4 col">
+        <div class="card larger red">
+          {{item}}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="s12 col">
+      <h4>Tools/OS:</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div data-ng-repeat="item in tools">
+      <div class="s12 m4 col">
+        <div class="card larger green">
+          {{item}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
