@@ -61,7 +61,7 @@ app.controller("projectsCtrl", function($scope) {
     },
     {
       title: '<div class="card center red"><a href="../assets/unity/interstellar_shooter.html" target="_blank" class="waves-effect"><b>Interstellar Shooter</b></a></div>',
-      description: 'Game resembling a classic space-shooter arcade. Made using Unity 5 with C# scripts. Also needs the <a href="http://unity3d.com/webplayer/" target="_blank" class="waves-effect">Unity3D plugin</a>.'
+      description: 'Game resembling a classic space-shooter arcade. Made using Unity 5 with C#; also needs the <a href="http://unity3d.com/webplayer/" target="_blank" class="waves-effect">Unity3D plugin</a>.'
     },
     {
       title: '<div class="card center red"><a href="https://github.com/Edmond-Wu/PhotoAlbum" target="_blank" class="waves-effect"><b>Photo Album</b></a></div>',
