@@ -38,41 +38,41 @@ app.controller("skillsCtrl", function($scope) {
 app.controller("projectsCtrl", function($scope) {
   $scope.webProjs = [
     {
-      title: '<a href="https://github.com/wyang6788/redditer" target="_blank" class="waves-effect"><b><i>Redditer:</i></b></a>',
-      description: 'Ruby-On-Rails chat messaging application that aims to bring together people who subscribe to various Reddit subreddits! Hosted by Amazon Web Services. App is no longer hosted so an <a href="http://imgur.com/a/KjLsx" target="_blank" class="waves-effect">Imgur link</a> is provided instead.'
+      title: '<div class="card center blue"><a href="https://github.com/wyang6788/redditer" target="_blank" class="waves-effect"><b>Redditer</b></a></div>',
+      description: 'Ruby-On-Rails chat messaging application that aims to bring together people who subscribe to various Reddit subreddits! <a href="http://imgur.com/a/KjLsx" target="_blank" class="waves-effect">Imgur link</a> is provided as an example.'
     },
     {
-      title: '<a href="https://github.com/Edmond-Wu/socket-chat" target="_blank" class="waves-effect"><b><i>Socket Chat:</i></b></a>',
+      title: '<div class="card center blue"><a href="https://github.com/Edmond-Wu/socket-chat" target="_blank" class="waves-effect"><b>Socket Chat</b></a></div>',
       description: 'Another chat application, built using socket.io! Users can log in, view other logged-on users, and change their message colors. Front-end designed with AngularJS and Materialize CSS.'
     },
     {
-      title: '<a href="https://rutgerstc.github.io" target="_blank" class="waves-effect"><b><i>Rutgers Tzu-Ching:</i></b></a>',
+      title: '<div class="card center blue"><a href="https://rutgerstc.github.io" target="_blank" class="waves-effect"><b>Rutgers Tzu-Ching</b></a></div>',
       description: 'Website for the Rutgers chapter of the Tzu-Chi Collegiate Association. Single-page application designed with AngularJS.'
     },
     {
-      title: '<a href="http://devpost.com/software/insightweet" target="_blank" class="waves-effect"><b><i>Insightweets:</i></b></a>',
+      title: '<div class="card center blue"><a href="http://devpost.com/software/insightweet" target="_blank" class="waves-effect"><b>Insightweets</b></a></div>',
       description: 'HackNY 2015 group web hack using IBM\'s Bluemix algorithm to find out what people are like based on their tweets (won best IBM hack at HackNY Spring 2015!)'
     }
   ];
   $scope.otherProjs = [
     {
-      title: '<a href="../assets/unity/td.html" target="_blank" class="waves-effect"><b><i>Tower Defense:</i></b></a>',
+      title: '<div class="card center red"><a href="../assets/unity/td.html" target="_blank" class="waves-effect"><b>Tower Defense</b></a></div>',
       description: 'A basic tower defense game with a geometric/cube theme with some dank memes. Made using Unity 5 with C#; requires <a href="http://unity3d.com/webplayer/" target="_blank" class="waves-effect">the Unity3D plug-in</a> to work.'
     },
     {
-      title: '<a href="../assets/unity/interstellar_shooter.html" target="_blank" class="waves-effect"><b><i>Interstellar Shooter:</i></b></a>',
+      title: '<div class="card center red"><a href="../assets/unity/interstellar_shooter.html" target="_blank" class="waves-effect"><b>Interstellar Shooter</b></a></div>',
       description: 'Game resembling a classic space-shooter arcade. Made using Unity 5 with C# scripts. Also needs the <a href="http://unity3d.com/webplayer/" target="_blank" class="waves-effect">Unity3D plugin</a>.'
     },
     {
-      title: '<a href="https://github.com/Edmond-Wu/PhotoAlbum" target="_blank" class="waves-effect"><b><i>Photo Album:</i></b></a>',
+      title: '<div class="card center red"><a href="https://github.com/Edmond-Wu/PhotoAlbum" target="_blank" class="waves-effect"><b>Photo Album</b></a></div>',
       description: 'JavaFX CRUD application resembling a photo album. Users can add/edit/delete albums and photos, as well as view/like other users\' photos.'
     },
     {
-      title: '<a href="https://github.com/Edmond-Wu/Chess" target="_blank" class="waves-effect"><b><i>Chess:</i></b></a>',
+      title: '<div class="card center red"><a href="https://github.com/Edmond-Wu/Chess" target="_blank" class="waves-effect"><b>Chess</b></a></div>',
       description: 'Java project that simulates a complete 2-player chess game with all competitive rules in terminal.'
     },
     {
-      title: '<a href="https://github.com/Edmond-Wu/Android-Books" target="_blank" class="waves-effect"><b><i>Android Books:</i></b></a>',
+      title: '<div class="card center red"><a href="https://github.com/Edmond-Wu/Android-Books" target="_blank" class="waves-effect"><b>Android Books</b></a></div>',
       description: 'Android book database application that allows for users to subscribe to books to receive new chapter updates.'
     }
   ];
