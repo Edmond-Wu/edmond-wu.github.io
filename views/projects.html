@@ -14,12 +14,12 @@
     </div>
     <div slider>
       <table>
-        <tr>
-          <td class="left-align">
-            <a href="https://github.com/amaczugowski/node-project-server" target="_blank" class="waves-effect"><b><i>Project Reports:</i></b></a>
+        <tr data-ng-repeat="project in webProjs">
+          <td>
+            {{project.title}}
           </td>
-          <td class="left-align">
-            Web application built using AngularJS with a NodeJS/Express back-end. Users submit project reports and log savings in money and productivity.
+          <td>
+            {{project.description}}
           </td>
         </tr>
         <tr>
@@ -27,7 +27,8 @@
             <a href="https://github.com/wyang6788/redditer" target="_blank" class="waves-effect"><b><i>Redditer:</i></b></a>
           </td>
           <td class="left-align">
-            Ruby-On-Rails chat messaging application that aims to bring together people who subscribe to various Reddit subreddits! Hosted by Amazon Web Services. App is no longer hosted so an <a href="http://imgur.com/a/KjLsx" target="_blank" class="waves-effect"><i>Imgur album link</i></a>            is provided instead.
+            Ruby-On-Rails chat messaging application that aims to bring together people who subscribe to various Reddit subreddits!
+            Hosted by Amazon Web Services. App is no longer hosted so an <a href="http://imgur.com/a/KjLsx" target="_blank" class="waves-effect">Imgur link</a> is provided instead.
           </td>
         </tr>
         <tr>
@@ -35,7 +36,8 @@
             <a href="https://github.com/Edmond-Wu/socket-chat" target="_blank" class="waves-effect"><b><i>Socket Chat:</i></b></a>
           </td>
           <td class="left-align">
-            Another chat application, built using socket.io! Users can log in, view other logged-on users, and change their message colors. Front-end designed with AngularJS and Materialize CSS.
+            Another chat application, built using socket.io! Users can log in, view other logged-on users, and change their message colors.
+            Front-end designed with AngularJS and Materialize CSS.
           </td>
         </tr>
         <tr>
@@ -68,17 +70,17 @@
             <a href="../assets/unity/td.html" target="_blank" class="waves-effect"><b><i>Tower Defense:</i></b></a>
           </td>
           <td class="left-align">
-            A basic tower defense game with a geometric/cube theme with some dank memes. Made using Unity 5 with C#; requires <a href="http://unity3d.com/webplayer/" target="_blank" class="waves-effect"><i>this corresponding Unity3D
-                        plug-in to work.</i></a>
+            A basic tower defense game with a geometric/cube theme with some dank memes. Made using Unity 5 with C#;
+            requires <a href="http://unity3d.com/webplayer/" target="_blank" class="waves-effect">the Unity3D plug-in</a> to work.
           </td>
         </tr>
         <tr>
           <td class="left-align">
-            <a href="../assets/unity/interstellar_shooter.html" target="_blank" class="waves-effect"><b><i>Interstellar
-                            Shooter:</i></b></a>
+            <a href="../assets/unity/interstellar_shooter.html" target="_blank" class="waves-effect"><b><i>Interstellar Shooter:</i></b></a>
           </td>
           <td class="left-align">
-            Game resembling a classic space-shooter arcade. Made using Unity 5 with C# scripts. Also needs the <a href="http://unity3d.com/webplayer/" target="_blank" class="waves-effect"><i>Unity3D plugin.</i></a>
+            Game resembling a classic space-shooter arcade. Made using Unity 5 with C# scripts.
+            Also needs the <a href="http://unity3d.com/webplayer/" target="_blank" class="waves-effect">Unity3D plugin</a>.
           </td>
         </tr>
         <tr>

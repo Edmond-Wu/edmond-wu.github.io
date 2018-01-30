@@ -35,7 +35,18 @@ app.controller("skillsCtrl", function($scope) {
   $scope.frameworks = ["angularJS", "jQuery", "Bootstrap", "Materialize", "Foundation", "NodeJS"];
   $scope.tools = ["Ubuntu", "Redhat Enterprise", "Unity3D engine", "Git", "Subversion/SVN"];
 });
-app.controller("projectsCtrl", function($scope) {});
+app.controller("projectsCtrl", function($scope) {
+  $scope.webProjs = [
+    {
+      title: '<a href="https://github.com/wyang6788/redditer" target="_blank" class="waves-effect"><b><i>Redditer:</i></b></a>',
+      description: 'Ruby-On-Rails chat messaging application that aims to bring together people who subscribe to various Reddit subreddits! Hosted by Amazon Web Services. App is no longer hosted so an <a href="http://imgur.com/a/KjLsx" target="_blank" class="waves-effect">Imgur link</a> is provided instead.'
+    },
+    {
+      title: '<a href="https://github.com/Edmond-Wu/socket-chat" target="_blank" class="waves-effect"><b><i>Socket Chat:</i></b></a>',
+      description: 'Another chat application, built using socket.io! Users can log in, view other logged-on users, and change their message colors. Front-end designed with AngularJS and Materialize CSS.'
+    }
+  ];
+});
 app.controller("cs170Ctrl", function($scope) {});
 app.controller("contactCtrl", function($scope) {});
 
