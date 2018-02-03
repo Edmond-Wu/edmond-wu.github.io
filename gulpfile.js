@@ -31,13 +31,6 @@ gulp.task('pack-css', function() {
     .pipe(gulp.dest('css'));
 });
 
-gulp.task('default', function() {
-  return runSequence(
-    ['pack-js', 'add-app-js'],
-    'pack-css'
-  );
-});
-
 /* js stuff needs to be done sequentially */
 gulp.task(
   'default',
