@@ -9,7 +9,7 @@ var series = require('gulp-series');
 gulp.task('pack-js', function() {
   return gulp.src(['bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js', 'bower_components/angular/angular.min.js',
     'bower_components/angular-route/angular-route.min.js', 'bower_components/angular-animate/angular-animate.min.js', 'js/vendor/angular-sanitize-1.6.5.min.js',
-    'js/vendor/jquery.min.js', 'bower_components/materialize/dist/js/materialize.min.js'])
+    'bower_components/jquery/dist/jquery.min.js', 'bower_components/materialize/dist/js/materialize.min.js'])
     .pipe(concat('vendor.js'))
     .pipe(minify())
     .pipe(gulp.dest('js'));

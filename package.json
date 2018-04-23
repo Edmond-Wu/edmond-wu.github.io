@@ -16,7 +16,13 @@
     "url": "https://github.com/Edmond-Wu/edmond-wu.github.io/issues"
   },
   "homepage": "https://github.com/Edmond-Wu/edmond-wu.github.io#readme",
-  "dependencies": {},
+  "dependencies": {
+    "angular": "^1.6.5",
+    "angular-sanitize": "^1.6.5",
+    "html5-boilerplate": "^6.0.1",
+    "materialize-css": "^0.100.2",
+    "mdi": "^2.2.43"
+  },
   "devDependencies": {
     "gulp": "git://github.com/gulpjs/gulp.git#6d71a658c61edb3090221579d8f97dbe086ba2ed",
     "gulp-clean-css": "^3.9.0",
