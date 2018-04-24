@@ -7,9 +7,9 @@ var series = require('gulp-series');
 
 /* packs vendor js files into a single file and minifies it */
 gulp.task('pack-js', function() {
-  return gulp.src(['node_modules/html5-boilerplate/dist/js/main.js', 'bower_components/angular/angular.min.js',
-    'bower_components/angular-route/angular-route.min.js', 'bower_components/angular-animate/angular-animate.min.js', 'js/vendor/angular-sanitize-1.6.5.min.js',
-    'bower_components/jquery/dist/jquery.min.js', 'bower_components/materialize/dist/js/materialize.min.js'])
+  return gulp.src(['node_modules/html5-boilerplate/dist/js/main.js', 'node_modules/angular/angular.min.js',
+    'node_modules/angular-route/angular-route.min.js', 'node_modules/angular-animate/angular-animate.min.js', 'node_modules/angular-sanitize/angular-sanitize.min.js',
+    'node_modules/jquery/dist/jquery.min.js', 'node_modules/materialize-css/dist/js/materialize.min.js'])
     .pipe(concat('vendor.js'))
     .pipe(minify())
     .pipe(gulp.dest('js'));
@@ -24,8 +24,8 @@ gulp.task('add-app-js', function() {
 
 /* packs css files into a single file and then minifies it */
 gulp.task('pack-css', function() {
-  return gulp.src(['bower_components/html5-boilerplate/dist/css/normalize.min.css', 'bower_components/html5-boilerplate/dist/css/main.min.css',
-    'bower_components/materialize/dist/css/materialize.min.css', 'bower_components/mdi/css/materialdesignicons.min.css', 'css/app.css'])
+  return gulp.src(['node_modules/html5-boilerplate/dist/css/normalize.css', 'node_modules/html5-boilerplate/dist/css/main.css',
+    'node_modules/materialize-css/dist/css/materialize.min.css', 'node_modules/mdi/css/materialdesignicons.min.css', 'css/app.css'])
     .pipe(concat('build.css'))
     .pipe(cleanCss())
     .pipe(gulp.dest('css'));
