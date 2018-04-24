@@ -4,69 +4,48 @@
 
     init : function(options) {
       var defaults = {
-        duration: 200, // ms
+        time_constant: 200, // ms
         dist: -100, // zoom scale TODO: make this more intuitive as an option
         shift: 0, // spacing for center image
         padding: 0, // Padding between non center items
-        fullWidth: false, // Change to full width styles
+        full_width: false, // Change to full width styles
         indicators: false, // Toggle indicators
-        noWrap: false, // Don't wrap around and cycle through items.
-        onCycleTo: null // Callback for when a new slide is cycled to.
+        no_wrap: false // Don't wrap around and cycle through items.
       };
       options = $.extend(defaults, options);
-      var namespace = Materialize.objectSelectorString($(this));
 
-      return this.each(function(i) {
+      return this.each(function() {
 
-        var images, item_width, item_height, offset, center, pressed, dim, count,
-            reference, referenceY, amplitude, target, velocity, scrolling,
+        var images, offset, center, pressed, dim, count,
+            reference, referenceY, amplitude, target, velocity,
             xform, frame, timestamp, ticker, dragged, vertical_dragged;
         var $indicators = $('<ul class="indicators"></ul>');
-        var scrollingTimeout = null;
-        var oneTimeCallback = null;
 
 
         // Initialize
         var view = $(this);
-        var hasMultipleSlides = view.find('.carousel-item').length > 1;
-        var showIndicators = (view.attr('data-indicators') || options.indicators) && hasMultipleSlides;
-        var noWrap = (view.attr('data-no-wrap') || options.noWrap) || !hasMultipleSlides;
-        var uniqueNamespace = view.attr('data-namespace') || namespace+i;
-        view.attr('data-namespace', uniqueNamespace);
+        var showIndicators = view.attr('data-indicators') || options.indicators;
+
+        // Don't double initialize.
+        if (view.hasClass('initialized')) {
+          // Redraw carousel.
+          $(this).trigger('carouselNext', [0.000001]);
+          return true;
+        }
 
 
         // Options
-        var setCarouselHeight = function(imageOnly) {
-          var firstSlide = view.find('.carousel-item.active').length ? view.find('.carousel-item.active').first() : view.find('.carousel-item').first();
-          var firstImage = firstSlide.find('img').first();
-          if (firstImage.length) {
-            if (firstImage[0].complete) {
-              // If image won't trigger the load event
-              var imageHeight = firstImage.height();
-              if (imageHeight > 0) {
-                view.css('height', firstImage.height());
-              } else {
-                // If image still has no height, use the natural dimensions to calculate
-                var naturalWidth = firstImage[0].naturalWidth;
-                var naturalHeight = firstImage[0].naturalHeight;
-                var adjustedHeight = (view.width() / naturalWidth) * naturalHeight;
-                view.css('height', adjustedHeight);
-              }
-            } else {
-              // Get height when image is loaded normally
-              firstImage.on('load', function(){
-                view.css('height', $(this).height());
-              });
-            }
-          } else if (!imageOnly) {
-            var slideHeight = firstSlide.height();
-            view.css('height', slideHeight);
-          }
-        };
-
-        if (options.fullWidth) {
+        if (options.full_width) {
           options.dist = 0;
-          setCarouselHeight();
+          var firstImage = view.find('.carousel-item img').first();
+          if (firstImage.length) {
+            imageHeight = firstImage.load(function(){
+              view.css('height', $(this).height());
+            });
+          } else {
+            imageHeight = view.find('.carousel-item').first().height();
+            view.css('height', imageHeight);
+          }
 
           // Offset fixed items when indicators.
           if (showIndicators) {
@@ -75,23 +54,11 @@
         }
 
 
-        // Don't double initialize.
-        if (view.hasClass('initialized')) {
-          // Recalculate variables
-          $(window).trigger('resize');
-
-          // Redraw carousel.
-          view.trigger('carouselNext', [0.000001]);
-          return true;
-        }
-
-
         view.addClass('initialized');
         pressed = false;
         offset = target = 0;
         images = [];
         item_width = view.find('.carousel-item').first().innerWidth();
-        item_height = view.find('.carousel-item').first().innerHeight();
         dim = item_width * 2 + options.padding;
 
         view.find('.carousel-item').each(function (i) {
@@ -105,9 +72,7 @@
             }
 
             // Handle clicks on indicators.
-            $indicator.click(function (e) {
-              e.stopPropagation();
-
+            $indicator.click(function () {
               var index = $(this).index();
               cycleTo(index);
             });
@@ -123,15 +88,15 @@
 
         function setupEvents() {
           if (typeof window.ontouchstart !== 'undefined') {
-            view.on('touchstart.carousel', tap);
-            view.on('touchmove.carousel', drag);
-            view.on('touchend.carousel', release);
+            view[0].addEventListener('touchstart', tap);
+            view[0].addEventListener('touchmove', drag);
+            view[0].addEventListener('touchend', release);
           }
-          view.on('mousedown.carousel', tap);
-          view.on('mousemove.carousel', drag);
-          view.on('mouseup.carousel', release);
-          view.on('mouseleave.carousel', release);
-          view.on('click.carousel', click);
+          view[0].addEventListener('mousedown', tap);
+          view[0].addEventListener('mousemove', drag);
+          view[0].addEventListener('mouseup', release);
+          view[0].addEventListener('mouseleave', release);
+          view[0].addEventListener('click', click);
         }
 
         function xpos(e) {
@@ -159,22 +124,7 @@
         }
 
         function scroll(x) {
-          // Track scrolling state
-          scrolling = true;
-          if (!view.hasClass('scrolling')) {
-            view.addClass('scrolling');
-          }
-          if (scrollingTimeout != null) {
-            window.clearTimeout(scrollingTimeout);
-          }
-          scrollingTimeout = window.setTimeout(function() {
-            scrolling = false;
-            view.removeClass('scrolling');
-          }, options.duration);
-
-          // Start actual scroll
           var i, half, delta, dir, tween, el, alignment, xTranslation;
-          var lastCenter = center;
 
           offset = (typeof x === 'number') ? x : offset;
           center = Math.floor((offset + dim / 2) / dim);
@@ -183,9 +133,9 @@
           tween = -dir * delta * 2 / dim;
           half = count >> 1;
 
-          if (!options.fullWidth) {
+          if (!options.full_width) {
             alignment = 'translateX(' + (view[0].clientWidth - item_width) / 2 + 'px) ';
-            alignment += 'translateY(' + (view[0].clientHeight - item_height) / 2 + 'px)';
+            alignment += 'translateY(' + (view[0].clientHeight - item_width) / 2 + 'px)';
           } else {
             alignment = 'translateX(0)';
           }
@@ -202,20 +152,14 @@
 
           // center
           // Don't show wrapped items.
-          if (!noWrap || (center >= 0 && center < count)) {
+          if (!options.no_wrap || (center >= 0 && center < count)) {
             el = images[wrap(center)];
-
-            // Add active class to center item.
-            if (!$(el).hasClass('active')) {
-              view.find('.carousel-item').removeClass('active');
-              $(el).addClass('active');
-            }
             el.style[xform] = alignment +
               ' translateX(' + (-delta / 2) + 'px)' +
               ' translateX(' + (dir * options.shift * tween * i) + 'px)' +
               ' translateZ(' + (options.dist * tween) + 'px)';
             el.style.zIndex = 0;
-            if (options.fullWidth) { tweenedOpacity = 1; }
+            if (options.full_width) { tweenedOpacity = 1; }
             else { tweenedOpacity = 1 - 0.2 * tween; }
             el.style.opacity = tweenedOpacity;
             el.style.display = 'block';
@@ -223,7 +167,7 @@
 
           for (i = 1; i <= half; ++i) {
             // right side
-            if (options.fullWidth) {
+            if (options.full_width) {
               zTranslation = options.dist;
               tweenedOpacity = (i === half && delta < 0) ? 1 - tween : 1;
             } else {
@@ -231,7 +175,7 @@
               tweenedOpacity = 1 - 0.2 * (i * 2 + tween * dir);
             }
             // Don't show wrapped items.
-            if (!noWrap || center + i < count) {
+            if (!options.no_wrap || center + i < count) {
               el = images[wrap(center + i)];
               el.style[xform] = alignment +
                 ' translateX(' + (options.shift + (dim * i - delta) / 2) + 'px)' +
@@ -243,7 +187,7 @@
 
 
             // left side
-            if (options.fullWidth) {
+            if (options.full_width) {
               zTranslation = options.dist;
               tweenedOpacity = (i === half && delta > 0) ? 1 - tween : 1;
             } else {
@@ -251,7 +195,7 @@
               tweenedOpacity = 1 - 0.2 * (i * 2 - tween * dir);
             }
             // Don't show wrapped items.
-            if (!noWrap || center - i >= 0) {
+            if (!options.no_wrap || center - i >= 0) {
               el = images[wrap(center - i)];
               el.style[xform] = alignment +
                 ' translateX(' + (-options.shift + (-dim * i - delta) / 2) + 'px)' +
@@ -264,30 +208,17 @@
 
           // center
           // Don't show wrapped items.
-          if (!noWrap || (center >= 0 && center < count)) {
+          if (!options.no_wrap || (center >= 0 && center < count)) {
             el = images[wrap(center)];
             el.style[xform] = alignment +
               ' translateX(' + (-delta / 2) + 'px)' +
               ' translateX(' + (dir * options.shift * tween) + 'px)' +
               ' translateZ(' + (options.dist * tween) + 'px)';
             el.style.zIndex = 0;
-            if (options.fullWidth) { tweenedOpacity = 1; }
+            if (options.full_width) { tweenedOpacity = 1; }
             else { tweenedOpacity = 1 - 0.2 * tween; }
             el.style.opacity = tweenedOpacity;
             el.style.display = 'block';
-          }
-
-          // onCycleTo callback
-          if (lastCenter !== center &&
-              typeof(options.onCycleTo) === "function") {
-            var $curr_item = view.find('.carousel-item').eq(wrap(center));
-            options.onCycleTo.call(this, $curr_item, dragged);
-          }
-
-          // One time callback
-          if (typeof(oneTimeCallback) === "function") {
-            oneTimeCallback.call(this, $curr_item, dragged);
-            oneTimeCallback = null;
           }
         }
 
@@ -309,7 +240,7 @@
 
           if (amplitude) {
             elapsed = Date.now() - timestamp;
-            delta = amplitude * Math.exp(-elapsed / options.duration);
+            delta = amplitude * Math.exp(-elapsed / options.time_constant);
             if (delta > 2 || delta < -2) {
                 scroll(target - delta);
                 requestAnimationFrame(autoScroll);
@@ -326,9 +257,9 @@
             e.stopPropagation();
             return false;
 
-          } else if (!options.fullWidth) {
+          } else if (!options.full_width) {
             var clickedIndex = $(e.target).closest('.carousel-item').index();
-            var diff = wrap(center) - clickedIndex;
+            var diff = (center % count) - clickedIndex;
 
             // Disable clicks if carousel was shifted by click
             if (diff !== 0) {
@@ -343,7 +274,7 @@
           var diff = (center % count) - n;
 
           // Account for wraparound.
-          if (!noWrap) {
+          if (!options.no_wrap) {
             if (diff < 0) {
               if (Math.abs(diff + count) < Math.abs(diff)) { diff += count; }
 
@@ -362,10 +293,6 @@
         }
 
         function tap(e) {
-          // Fixes firefox draggable image bug
-          if (e.type === 'mousedown' && $(e.target).is('img')) {
-            e.preventDefault();
-          }
           pressed = true;
           dragged = false;
           vertical_dragged = false;
@@ -377,6 +304,7 @@
           timestamp = Date.now();
           clearInterval(ticker);
           ticker = setInterval(track, 100);
+
         }
 
         function drag(e) {
@@ -430,7 +358,7 @@
           target = Math.round(target / dim) * dim;
 
           // No wrap of items.
-          if (noWrap) {
+          if (options.no_wrap) {
             if (target >= dim * (count - 1)) {
               target = dim * (count - 1);
             } else if (target < 0) {
@@ -459,34 +387,17 @@
         });
 
 
-        var throttledResize = Materialize.throttle(function() {
-          if (options.fullWidth) {
-            item_width = view.find('.carousel-item').first().innerWidth();
-            var imageHeight = view.find('.carousel-item.active').height();
-            dim = item_width * 2 + options.padding;
-            offset = center * 2 * item_width;
-            target = offset;
-            setCarouselHeight(true);
-          } else {
-            scroll();
-          }
-        }, 200);
-        $(window)
-          .off('resize.carousel-'+uniqueNamespace)
-          .on('resize.carousel-'+uniqueNamespace, throttledResize);
+
+        window.onresize = scroll;
 
         setupEvents();
         scroll(offset);
 
-        $(this).on('carouselNext', function(e, n, callback) {
+        $(this).on('carouselNext', function(e, n) {
           if (n === undefined) {
             n = 1;
           }
-          if (typeof(callback) === "function") {
-            oneTimeCallback = callback;
-          }
-
-          target = (dim * Math.round(offset / dim)) + (dim * n);
+          target = offset + dim * n;
           if (offset !== target) {
             amplitude = target - offset;
             timestamp = Date.now();
@@ -494,15 +405,11 @@
           }
         });
 
-        $(this).on('carouselPrev', function(e, n, callback) {
+        $(this).on('carouselPrev', function(e, n) {
           if (n === undefined) {
             n = 1;
           }
-          if (typeof(callback) === "function") {
-            oneTimeCallback = callback;
-          }
-
-          target = (dim * Math.round(offset / dim)) - (dim * n);
+          target = offset - dim * n;
           if (offset !== target) {
             amplitude = target - offset;
             timestamp = Date.now();
@@ -510,14 +417,10 @@
           }
         });
 
-        $(this).on('carouselSet', function(e, n, callback) {
+        $(this).on('carouselSet', function(e, n) {
           if (n === undefined) {
             n = 0;
           }
-          if (typeof(callback) === "function") {
-            oneTimeCallback = callback;
-          }
-
           cycleTo(n);
         });
 
@@ -526,28 +429,14 @@
 
 
     },
-    next : function(n, callback) {
-      $(this).trigger('carouselNext', [n, callback]);
+    next : function(n) {
+      $(this).trigger('carouselNext', [n]);
     },
-    prev : function(n, callback) {
-      $(this).trigger('carouselPrev', [n, callback]);
+    prev : function(n) {
+      $(this).trigger('carouselPrev', [n]);
     },
-    set : function(n, callback) {
-      $(this).trigger('carouselSet', [n, callback]);
-    },
-    destroy : function() {
-      var uniqueNamespace = $(this).attr('data-namespace');
-      $(this).removeAttr('data-namespace');
-      $(this).removeClass('initialized');
-      $(this).find('.indicators').remove();
-
-      // Remove event handlers
-      $(this).off('carouselNext carouselPrev carouselSet');
-      $(window).off('resize.carousel-'+uniqueNamespace);
-      if (typeof window.ontouchstart !== 'undefined') {
-        $(this).off('touchstart.carousel touchmove.carousel touchend.carousel');
-      }
-      $(this).off('mousedown.carousel mousemove.carousel mouseup.carousel mouseleave.carousel click.carousel');
+    set : function(n) {
+      $(this).trigger('carouselSet', [n]);
     }
   };
 

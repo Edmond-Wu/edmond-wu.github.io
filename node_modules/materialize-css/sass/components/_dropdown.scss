@@ -44,7 +44,7 @@
 
     & > span > label {
       top: 1px;
-      left: 0;
+      left: 3px;
       height: 18px;
     }
 
@@ -52,17 +52,6 @@
     & > a > i {
       height: inherit;
       line-height: inherit;
-      float: left;
-      margin: 0 24px 0 0;
-      width: 24px;
     }
   }
 }
-
-// Input field specificity bugfix
-.input-field.col .dropdown-content [type="checkbox"] + label {
-  top: 1px;
-  left: 0;
-  height: 18px;
-}
-

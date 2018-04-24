@@ -5,8 +5,8 @@
 [type="radio"]:not(:checked),
 [type="radio"]:checked {
   position: absolute;
+  left: -9999px;
   opacity: 0;
-  pointer-events: none;
 }
 
 [type="radio"]:not(:checked) + label,
@@ -19,6 +19,8 @@
   line-height: 25px;
   font-size: 1rem;
   transition: .28s ease;
+
+  -khtml-user-select: none; /* webkit (konqueror) browsers */
   user-select: none;
 }
 
@@ -51,6 +53,7 @@
 }
 
 [type="radio"]:not(:checked) + label:after {
+  z-index: -1;
   transform: scale(0);
 }
 
@@ -68,6 +71,7 @@
 [type="radio"]:checked + label:after,
 [type="radio"].with-gap:checked + label:after {
   background-color: $radio-fill-color;
+  z-index: 0;
 }
 
 [type="radio"]:checked + label:after {

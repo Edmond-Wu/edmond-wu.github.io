@@ -6,6 +6,7 @@
   display: inline-block;
   height: $button-height;
   line-height: $button-height;
+  outline: 0;
   padding: $button-padding;
   text-transform: uppercase;
   vertical-align: middle;
@@ -17,20 +18,20 @@
 .btn.disabled,
 .btn-floating.disabled,
 .btn-large.disabled,
-.btn-flat.disabled,
 .btn:disabled,
-.btn-floating:disabled,
 .btn-large:disabled,
-.btn-flat:disabled,
+.btn-floating:disabled,
 .btn[disabled],
-.btn-floating[disabled],
 .btn-large[disabled],
-.btn-flat[disabled] {
-  pointer-events: none;
+.btn-floating[disabled] {
   background-color: $button-disabled-background !important;
   box-shadow: none;
   color: $button-disabled-color !important;
   cursor: default;
+
+  * {
+    pointer-events: none;
+  }
 
   &:hover {
     background-color: $button-disabled-background !important;
@@ -43,20 +44,9 @@
 .btn-floating,
 .btn-large,
 .btn-flat {
-  font-size: $button-font-size;
-  outline: 0;
-
   i {
-    font-size: $button-icon-font-size;
+    font-size: $button-font-size;
     line-height: inherit;
-  }
-}
-
-// Shared focus button style
-.btn,
-.btn-floating {
-  &:focus {
-    background-color: darken($button-raised-background, 10%);
   }
 }
 
@@ -79,38 +69,6 @@
 
 // Floating button
 .btn-floating {
-  &:hover {
-    background-color: $button-floating-background-hover;
-    @extend .z-depth-1-half;
-  }
-
-  &:before {
-    border-radius: 0;
-  }
-
-  &.btn-large {
-    &.halfway-fab {
-      bottom: -$button-floating-large-size / 2;
-    }
-
-    width: $button-floating-large-size;
-    height: $button-floating-large-size;
-    i {
-      line-height: $button-floating-large-size;
-    }
-  }
-
-  &.halfway-fab {
-    &.left {
-      right: auto;
-      left: 24px;
-    }
-
-    position: absolute;
-    right: 24px;
-    bottom: -$button-floating-size / 2;
-  }
-
   display: inline-block;
   color: $button-floating-color;
   position: relative;
@@ -134,6 +92,23 @@
     color: $button-floating-color;
     font-size: $button-large-icon-font-size;
     line-height: $button-floating-size;
+  }
+
+  &:hover {
+    background-color: $button-floating-background-hover;
+    @extend .z-depth-1-half;
+  }
+
+  &:before {
+    border-radius: 0;
+  }
+
+  &.btn-large {
+    width: $button-floating-large-size;
+    height: $button-floating-large-size;
+    i {
+      line-height: $button-floating-large-size;
+    }
   }
 }
 
@@ -169,55 +144,12 @@ button.btn-floating {
     }
   }
 
-  &.toolbar {
-    &.active {
-      & > a i {
-        opacity: 0;
-      }
-    }
-
-    padding: 0;
-    height: $button-floating-large-size;
-
-    ul {
-      display: flex;
-      top: 0;
-      bottom: 0;
-      z-index: 1;
-
-      li {
-        flex: 1;
-        display: inline-block;
-        margin: 0;
-        height: 100%;
-        transition: none;
-
-        a {
-          display: block;
-          overflow: hidden;
-          position: relative;
-          width: 100%;
-          height: 100%;
-          background-color: transparent;
-          box-shadow: none;
-          color: #fff;
-          line-height: $button-floating-large-size;
-          z-index: 1;
-
-          i {
-            line-height: inherit;
-          }
-        }
-      }
-    }
-  }
-
   position: fixed;
   right: 23px;
   bottom: 23px;
   padding-top: 15px;
   margin-bottom: 0;
-  z-index: 997;
+  z-index: 998;
 
   ul {
     left: 0;
@@ -236,18 +168,6 @@ button.btn-floating {
       opacity: 0;
     }
   }
-
-  .fab-backdrop {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    width: $button-floating-size;
-    height: $button-floating-size;
-    background-color: $button-floating-background;
-    border-radius: $button-floating-radius;
-    transform: scale(0);
-  }
 }
 
 // Flat button
@@ -259,17 +179,17 @@ button.btn-floating {
   transition: background-color .2s;
 
   &:focus,
+  &:active {
+    background-color: transparent;
+  }
+
   &:hover {
+    background-color: rgba(0,0,0,.1);
     box-shadow: none;
   }
 
-  &:focus {
-    background-color: rgba(0,0,0,.1);
-  }
-
   &.disabled {
-    background-color: transparent !important;
-    color: $button-flat-disabled-color !important;
+    color: $button-flat-disabled-color;
     cursor: default;
   }
 }

@@ -7,7 +7,16 @@
 
 (function ( factory ) {
 
-    Materialize.Picker = factory( jQuery )
+    // AMD.
+    if ( typeof define == 'function' && define.amd )
+        define( 'picker', ['jquery'], factory )
+
+    // Node.js/browserify.
+    else if ( typeof exports == 'object' )
+        module.exports = factory( require('jquery') )
+
+    // Browser globals.
+    else this.Picker = factory( jQuery )
 
 }(function( $ ) {
 
@@ -108,7 +117,7 @@ function PickerConstructor( ELEMENT, NAME, COMPONENT, OPTIONS ) {
 
                 // Insert the root as specified in the settings.
                 if ( SETTINGS.container ) $( SETTINGS.container ).append( P.$root )
-                else $ELEMENT.before( P.$root )
+                else $ELEMENT.after( P.$root )
 
 
                 // Bind the default component and settings events.
@@ -290,10 +299,7 @@ function PickerConstructor( ELEMENT, NAME, COMPONENT, OPTIONS ) {
 
                             // On “enter”, if the highlighted item isn’t disabled, set the value and close.
                             else if ( !P.$root.find( '.' + CLASSES.highlighted ).hasClass( CLASSES.disabled ) ) {
-                                P.set( 'select', P.component.item.highlight )
-                                if ( SETTINGS.closeOnSelect ) {
-                                    P.close( true )
-                                }
+                                P.set( 'select', P.component.item.highlight ).close()
                             }
                         }
 
@@ -694,8 +700,8 @@ function PickerConstructor( ELEMENT, NAME, COMPONENT, OPTIONS ) {
 
                     // * For IE, non-focusable elements can be active elements as well
                     //   (http://stackoverflow.com/a/2684561).
-                    activeElement = getActiveElement();
-                    activeElement = activeElement && ( activeElement.type || activeElement.href ) && activeElement;
+                    activeElement = getActiveElement()
+                    activeElement = activeElement && ( activeElement.type || activeElement.href )
 
                 // If it’s disabled or nothing inside is actively focused, re-focus the element.
                 if ( targetDisabled || activeElement && !$.contains( P.$root[0], activeElement ) ) {
@@ -710,17 +716,11 @@ function PickerConstructor( ELEMENT, NAME, COMPONENT, OPTIONS ) {
                 // If something is picked, set `select` then close with focus.
                 else if ( !targetDisabled && 'pick' in targetData ) {
                     P.set( 'select', targetData.pick )
-                    if ( SETTINGS.closeOnSelect ) {
-                        P.close( true )
-                    }
                 }
 
                 // If a “clear” button is pressed, empty the values and close with focus.
                 else if ( targetData.clear ) {
-                    P.clear()
-                    if ( SETTINGS.closeOnSelect ) {
-                        P.close( true )
-                    }
+                    P.clear().close( true )
                 }
 
                 else if ( targetData.close ) {
@@ -780,7 +780,7 @@ function PickerConstructor( ELEMENT, NAME, COMPONENT, OPTIONS ) {
 
         // Insert the hidden input as specified in the settings.
         if ( SETTINGS.container ) $( SETTINGS.container ).append( P._hidden )
-        else $ELEMENT.before( P._hidden )
+        else $ELEMENT.after( P._hidden )
     }
 
 
@@ -1119,3 +1119,5 @@ return PickerConstructor
 
 
 }));
+
+

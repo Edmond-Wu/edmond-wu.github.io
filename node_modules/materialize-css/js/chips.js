@@ -1,16 +1,16 @@
 (function ($) {
+  var chipsHandleEvents = false;
   var materialChipsDefaults = {
     data: [],
     placeholder: '',
     secondaryPlaceholder: '',
-    autocompleteOptions: {},
   };
 
-  $(document).ready(function() {
+  $(document).ready(function(){
     // Handle removal of static chips.
     $(document).on('click', '.chip .close', function(e){
       var $chips = $(this).closest('.chips');
-      if ($chips.attr('data-initialized')) {
+      if ($chips.data('initialized')) {
         return;
       }
       $(this).closest('.chip').remove();
@@ -33,8 +33,11 @@
       return this.$el.data('chips');
     }
 
-    var curr_options = $.extend({}, materialChipsDefaults, options);
-    self.hasAutocomplete = !$.isEmptyObject(curr_options.autocompleteOptions.data);
+    if ('options' === options) {
+      return this.$el.data('options');
+    }
+
+    this.$el.data('options', $.extend({}, materialChipsDefaults, options));
 
     // Initialize
     this.init = function() {
@@ -42,46 +45,40 @@
       var chips;
       self.$el.each(function(){
         var $chips = $(this);
-        var chipId = Materialize.guid();
-        self.chipId = chipId;
-
-        if (!curr_options.data || !(curr_options.data instanceof Array)) {
-          curr_options.data = [];
+        if ($chips.data('initialized')) {
+          // Prevent double initialization.
+          return;
         }
-        $chips.data('chips', curr_options.data);
-        $chips.attr('data-index', i);
-        $chips.attr('data-initialized', true);
+        var options = $chips.data('options');
+        if (!options.data || !options.data instanceof Array) {
+          options.data = [];
+        }
+        $chips.data('chips', options.data);
+        $chips.data('index', i);
+        $chips.data('initialized', true);
 
         if (!$chips.hasClass(self.SELS.CHIPS)) {
           $chips.addClass('chips');
         }
 
-        self.chips($chips, chipId);
+        self.chips($chips);
         i++;
       });
     };
 
-    this.handleEvents = function() {
+    this.handleEvents = function(){
       var SELS = self.SELS;
 
-      self.$document.off('click.chips-focus', SELS.CHIPS).on('click.chips-focus', SELS.CHIPS, function(e){
+      self.$document.on('click', SELS.CHIPS, function(e){
         $(e.target).find(SELS.INPUT).focus();
       });
 
-      self.$document.off('click.chips-select', SELS.CHIP).on('click.chips-select', SELS.CHIP, function(e){
-        var $chip = $(e.target);
-        if ($chip.length) {
-          var wasSelected = $chip.hasClass('selected');
-          var $chips = $chip.closest(SELS.CHIPS);
-          $(SELS.CHIP).removeClass('selected');
-
-          if (!wasSelected) {
-            self.selectChip($chip.index(), $chips);
-          }
-        }
+      self.$document.on('click', SELS.CHIP, function(e){
+        $(SELS.CHIP).removeClass('selected');
+        $(this).toggleClass('selected');
       });
 
-      self.$document.off('keydown.chips').on('keydown.chips', function(e){
+      self.$document.on('keydown', function(e){
         if ($(e.target).is('input, textarea')) {
           return;
         }
@@ -98,9 +95,10 @@
 
         if (e.which === 8 || e.which === 46) {
           e.preventDefault();
+          var chipsIndex = $chips.data('index');
 
           index = $chip.index();
-          self.deleteChip(index, $chips);
+          self.deleteChip(chipsIndex, index, $chips);
 
           var selectIndex = null;
           if ((index + 1) < length) {
@@ -112,7 +110,7 @@
           if (selectIndex < 0) selectIndex = null;
 
           if (null !== selectIndex) {
-            self.selectChip(selectIndex, $chips);
+            self.selectChip(chipsIndex, selectIndex, $chips);
           }
           if (!length) $chips.find('input').focus();
 
@@ -123,7 +121,7 @@
             return;
           }
           $(SELS.CHIP).removeClass('selected');
-          self.selectChip(index, $chips);
+          self.selectChip($chips.data('index'), index, $chips);
 
         // right
         } else if (e.which === 39) {
@@ -133,121 +131,84 @@
             $chips.find('input').focus();
             return;
           }
-          self.selectChip(index, $chips);
+          self.selectChip($chips.data('index'), index, $chips);
         }
       });
 
-      self.$document.off('focusin.chips', SELS.CHIPS + ' ' + SELS.INPUT).on('focusin.chips', SELS.CHIPS + ' ' + SELS.INPUT, function(e){
-        var $currChips = $(e.target).closest(SELS.CHIPS);
-        $currChips.addClass('focus');
-        $currChips.siblings('label, .prefix').addClass('active');
+      self.$document.on('focusin', SELS.CHIPS + ' ' + SELS.INPUT, function(e){
+        $(e.target).closest(SELS.CHIPS).addClass('focus');
         $(SELS.CHIP).removeClass('selected');
       });
 
-      self.$document.off('focusout.chips', SELS.CHIPS + ' ' + SELS.INPUT).on('focusout.chips', SELS.CHIPS + ' ' + SELS.INPUT, function(e){
-        var $currChips = $(e.target).closest(SELS.CHIPS);
-        $currChips.removeClass('focus');
-
-        // Remove active if empty
-        if ($currChips.data('chips') === undefined || !$currChips.data('chips').length) {
-          $currChips.siblings('label').removeClass('active');
-        }
-        $currChips.siblings('.prefix').removeClass('active');
+      self.$document.on('focusout', SELS.CHIPS + ' ' + SELS.INPUT, function(e){
+        $(e.target).closest(SELS.CHIPS).removeClass('focus');
       });
 
-      self.$document.off('keydown.chips-add', SELS.CHIPS + ' ' + SELS.INPUT).on('keydown.chips-add', SELS.CHIPS + ' ' + SELS.INPUT, function(e){
+      self.$document.on('keydown', SELS.CHIPS + ' ' + SELS.INPUT, function(e){
         var $target = $(e.target);
         var $chips = $target.closest(SELS.CHIPS);
+        var chipsIndex = $chips.data('index');
         var chipsLength = $chips.children(SELS.CHIP).length;
 
         // enter
         if (13 === e.which) {
-          // Override enter if autocompleting.
-          if (self.hasAutocomplete &&
-              $chips.find('.autocomplete-content.dropdown-content').length &&
-              $chips.find('.autocomplete-content.dropdown-content').children().length) {
-            return;
-          }
-
           e.preventDefault();
-          self.addChip({tag: $target.val()}, $chips);
+          self.addChip(chipsIndex, {tag: $target.val()}, $chips);
           $target.val('');
           return;
         }
 
         // delete or left
-        if ((8 === e.keyCode || 37 === e.keyCode) && '' === $target.val() && chipsLength) {
-          e.preventDefault();
-          self.selectChip(chipsLength - 1, $chips);
+         if ((8 === e.keyCode || 37 === e.keyCode) && '' === $target.val() && chipsLength) {
+          self.selectChip(chipsIndex, chipsLength - 1, $chips);
           $target.blur();
           return;
         }
       });
 
-      // Click on delete icon in chip.
-      self.$document.off('click.chips-delete', SELS.CHIPS + ' ' + SELS.DELETE).on('click.chips-delete', SELS.CHIPS + ' ' + SELS.DELETE, function(e) {
+      self.$document.on('click', SELS.CHIPS + ' ' + SELS.DELETE, function(e) {
         var $target = $(e.target);
         var $chips = $target.closest(SELS.CHIPS);
         var $chip = $target.closest(SELS.CHIP);
         e.stopPropagation();
-        self.deleteChip($chip.index(), $chips);
+        self.deleteChip(
+          $chips.data('index'),
+          $chip.index(),
+          $chips
+        );
         $chips.find('input').focus();
       });
     };
 
-    this.chips = function($chips, chipId) {
-      $chips.empty();
+    this.chips = function($chips) {
+      var html = '';
+      var options = $chips.data('options');
       $chips.data('chips').forEach(function(elem){
-        $chips.append(self.renderChip(elem));
+        html += self.renderChip(elem);
       });
-      $chips.append($('<input id="' + chipId +'" class="input" placeholder="">'));
+      html += '<input class="input" placeholder="">';
+      $chips.html(html);
       self.setPlaceholder($chips);
-
-      // Set for attribute for label
-      var label = $chips.next('label');
-      if (label.length) {
-        label.attr('for', chipId);
-
-        if ($chips.data('chips')!== undefined && $chips.data('chips').length) {
-          label.addClass('active');
-        }
-      }
-
-      // Setup autocomplete if needed.
-      var input = $('#' + chipId);
-      if (self.hasAutocomplete) {
-        curr_options.autocompleteOptions.onAutocomplete = function(val) {
-          self.addChip({tag: val}, $chips);
-          input.val('');
-          input.focus();
-        }
-        input.autocomplete(curr_options.autocompleteOptions);
-      }
     };
 
-    /**
-     * Render chip jQuery element.
-     * @param {Object} elem
-     * @return {jQuery}
-     */
     this.renderChip = function(elem) {
       if (!elem.tag) return;
 
-      var $renderedChip = $('<div class="chip"></div>');
-      $renderedChip.text(elem.tag);
+      var html = '<div class="chip">' + elem.tag;
       if (elem.image) {
-        $renderedChip.prepend($('<img />').attr('src', elem.image))
+        html += ' <img src="' + elem.image + '"> ';
       }
-      $renderedChip.append($('<i class="material-icons close">close</i>'));
-      return $renderedChip;
+      html += '<i class="material-icons close">close</i>';
+      html += '</div>';
+      return html;
     };
 
     this.setPlaceholder = function($chips) {
-      if (($chips.data('chips') !== undefined && !$chips.data('chips').length) && curr_options.placeholder) {
-        $chips.find('input').prop('placeholder', curr_options.placeholder);
-
-      } else if (($chips.data('chips') === undefined || !!$chips.data('chips').length) && curr_options.secondaryPlaceholder) {
-        $chips.find('input').prop('placeholder', curr_options.secondaryPlaceholder);
+      var options = $chips.data('options');
+      if ($chips.data('chips').length && options.placeholder) {
+        $chips.find('input').prop('placeholder', options.placeholder);
+      } else if (!$chips.data('chips').length && options.secondaryPlaceholder) {
+        $chips.find('input').prop('placeholder', options.secondaryPlaceholder);
       }
     };
 
@@ -263,42 +224,27 @@
       return '' !== elem.tag && !exists;
     };
 
-    this.addChip = function(elem, $chips) {
+    this.addChip = function(chipsIndex, elem, $chips) {
       if (!self.isValid($chips, elem)) {
         return;
       }
-      var $renderedChip = self.renderChip(elem);
-      var newData = [];
-      var oldData = $chips.data('chips');
-      for (var i = 0; i < oldData.length; i++) {
-        newData.push(oldData[i]);
-      }
-      newData.push(elem);
-
-      $chips.data('chips', newData);
-      $renderedChip.insertBefore($chips.find('input'));
+      var options = $chips.data('options');
+      var chipHtml = self.renderChip(elem);
+      $chips.data('chips').push(elem);
+      $(chipHtml).insertBefore($chips.find('input'));
       $chips.trigger('chip.add', elem);
       self.setPlaceholder($chips);
     };
 
-    this.deleteChip = function(chipIndex, $chips) {
+    this.deleteChip = function(chipsIndex, chipIndex, $chips) {
       var chip = $chips.data('chips')[chipIndex];
       $chips.find('.chip').eq(chipIndex).remove();
-
-      var newData = [];
-      var oldData = $chips.data('chips');
-      for (var i = 0; i < oldData.length; i++) {
-        if (i !== chipIndex) {
-          newData.push(oldData[i]);
-        }
-      }
-
-      $chips.data('chips', newData);
+      $chips.data('chips').splice(chipIndex, 1);
       $chips.trigger('chip.delete', chip);
       self.setPlaceholder($chips);
     };
 
-    this.selectChip = function(chipIndex, $chips) {
+    this.selectChip = function(chipsIndex, chipIndex, $chips) {
       var $chip = $chips.find('.chip').eq(chipIndex);
       if ($chip && false === $chip.hasClass('selected')) {
         $chip.addClass('selected');
@@ -313,6 +259,9 @@
     // init
     this.init();
 
-    this.handleEvents();
+    if (!chipsHandleEvents) {
+      this.handleEvents();
+      chipsHandleEvents = true;
+    }
   };
 }( jQuery ));

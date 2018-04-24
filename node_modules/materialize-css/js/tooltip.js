@@ -15,7 +15,6 @@
       if (options === "remove") {
         this.each(function() {
           $('#' + $(this).attr('data-tooltip-id')).remove();
-          $(this).removeAttr('data-tooltip-id');
           $(this).off('mouseenter.tooltip mouseleave.tooltip');
         });
         return false;
@@ -26,12 +25,6 @@
       return this.each(function() {
         var tooltipId = Materialize.guid();
         var origin = $(this);
-
-        // Destroy old tooltip
-        if (origin.attr('data-tooltip-id')) {
-          $('#' + origin.attr('data-tooltip-id')).remove();
-        }
-
         origin.attr('data-tooltip-id', tooltipId);
 
         // Get attributes.
@@ -87,20 +80,18 @@
             started = true;
             tooltipEl.velocity('stop');
             backdrop.velocity('stop');
-            tooltipEl.css({ visibility: 'visible', left: '0px', top: '0px' });
+            tooltipEl.css({ display: 'block', left: '0px', top: '0px' });
 
             // Tooltip positioning
             var originWidth = origin.outerWidth();
             var originHeight = origin.outerHeight();
+
             var tooltipHeight = tooltipEl.outerHeight();
             var tooltipWidth = tooltipEl.outerWidth();
             var tooltipVerticalMovement = '0px';
             var tooltipHorizontalMovement = '0px';
-            var backdropOffsetWidth = backdrop[0].offsetWidth;
-            var backdropOffsetHeight = backdrop[0].offsetHeight;
             var scaleXFactor = 8;
             var scaleYFactor = 8;
-            var scaleFactor = 0;
             var targetTop, targetLeft, newCoordinates;
 
             if (tooltipPosition === "top") {
@@ -108,6 +99,7 @@
               targetTop = origin.offset().top - tooltipHeight - margin;
               targetLeft = origin.offset().left + originWidth/2 - tooltipWidth/2;
               newCoordinates = repositionWithinScreen(targetLeft, targetTop, tooltipWidth, tooltipHeight);
+
               tooltipVerticalMovement = '-10px';
               backdrop.css({
                 bottom: 0,
@@ -115,7 +107,7 @@
                 borderRadius: '14px 14px 0 0',
                 transformOrigin: '50% 100%',
                 marginTop: tooltipHeight,
-                marginLeft: (tooltipWidth/2) - (backdropOffsetWidth/2)
+                marginLeft: (tooltipWidth/2) - (backdrop.width()/2)
               });
             }
             // Left Position
@@ -163,7 +155,7 @@
               backdrop.css({
                 top: 0,
                 left: 0,
-                marginLeft: (tooltipWidth/2) - (backdropOffsetWidth/2)
+                marginLeft: (tooltipWidth/2) - (backdrop.width()/2)
               });
             }
 
@@ -174,15 +166,14 @@
             });
 
             // Calculate Scale to fill
-            scaleXFactor = Math.SQRT2 * tooltipWidth / parseInt(backdropOffsetWidth);
-            scaleYFactor = Math.SQRT2 * tooltipHeight / parseInt(backdropOffsetHeight);
-            scaleFactor = Math.max(scaleXFactor, scaleYFactor);
+            scaleXFactor = Math.SQRT2 * tooltipWidth / parseInt(backdrop.css('width'));
+            scaleYFactor = Math.SQRT2 * tooltipHeight / parseInt(backdrop.css('height'));
 
-            tooltipEl.velocity({ translateY: tooltipVerticalMovement, translateX: tooltipHorizontalMovement}, { duration: 350, queue: false })
+            tooltipEl.velocity({ marginTop: tooltipVerticalMovement, marginLeft: tooltipHorizontalMovement}, { duration: 350, queue: false })
               .velocity({opacity: 1}, {duration: 300, delay: 50, queue: false});
-            backdrop.css({ visibility: 'visible' })
+            backdrop.css({ display: 'block' })
               .velocity({opacity:1},{duration: 55, delay: 0, queue: false})
-              .velocity({scaleX: scaleFactor, scaleY: scaleFactor}, {duration: 300, delay: 0, queue: false, easing: 'easeInOutQuad'});
+              .velocity({scaleX: scaleXFactor, scaleY: scaleYFactor}, {duration: 300, delay: 0, queue: false, easing: 'easeInOutQuad'});
           };
 
           timeoutRef = setTimeout(showTooltip, tooltipDelay); // End Interval
@@ -198,13 +189,13 @@
           setTimeout(function() {
             if (started !== true) {
               tooltipEl.velocity({
-                opacity: 0, translateY: 0, translateX: 0}, { duration: 225, queue: false});
+                opacity: 0, marginTop: 0, marginLeft: 0}, { duration: 225, queue: false});
               backdrop.velocity({opacity: 0, scaleX: 1, scaleY: 1}, {
                 duration:225,
                 queue: false,
                 complete: function(){
-                  backdrop.css({ visibility: 'hidden' });
-                  tooltipEl.css({ visibility: 'hidden' });
+                  backdrop.css('display', 'none');
+                  tooltipEl.css('display', 'none');
                   started = false;}
               });
             }
