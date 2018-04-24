@@ -7,7 +7,7 @@ var series = require('gulp-series');
 
 /* packs vendor js files into a single file and minifies it */
 gulp.task('pack-js', function() {
-  return gulp.src(['bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js', 'bower_components/angular/angular.min.js',
+  return gulp.src(['node_modules/html5-boilerplate/dist/js/main.js', 'bower_components/angular/angular.min.js',
     'bower_components/angular-route/angular-route.min.js', 'bower_components/angular-animate/angular-animate.min.js', 'js/vendor/angular-sanitize-1.6.5.min.js',
     'bower_components/jquery/dist/jquery.min.js', 'bower_components/materialize/dist/js/materialize.min.js'])
     .pipe(concat('vendor.js'))
