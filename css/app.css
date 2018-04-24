@@ -15,8 +15,9 @@
 
 @font-face {
   font-family: "Material Design Icons";
-  src: url("../bower_components/mdi/fonts/materialdesignicons-webfont.eot?v=2.0.46");
-  src: url("../bower_components/mdi/fonts/materialdesignicons-webfont.eot?#iefix&v=2.0.46") format("embedded-opentype"), url("../bower_components/mdi/fonts/materialdesignicons-webfont.woff2?v=2.0.46") format("woff2"), url("../bower_components/mdi/fonts/materialdesignicons-webfont.woff?v=2.0.46") format("woff"), url("../bower_components/mdi/fonts/materialdesignicons-webfont.ttf?v=2.0.46") format("truetype"), url("../bower_components/mdi/fonts/materialdesignicons-webfont.svg?v=2.0.46#materialdesigniconsregular") format("svg");
+  src: url("../node_modules/mdi/fonts/materialdesignicons-webfont.eot?v=2.0.46");
+  src: url("../node_modules/mdi/fonts/materialdesignicons-webfont.eot?#iefix&v=2.0.46") format("embedded-opentype"), url("../node_modules/mdi/fonts/materialdesignicons-webfont.woff2?v=2.0.46") format("woff2"),
+    url("../node_modules/mdi/fonts/materialdesignicons-webfont.woff?v=2.0.46") format("woff"), url("../node_modules/mdi/fonts/materialdesignicons-webfont.ttf?v=2.0.46") format("truetype"), url("../node_modules/mdi/fonts/materialdesignicons-webfont.svg?v=2.0.46#materialdesigniconsregular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -170,4 +171,8 @@ table, tr, td {
 
 .two-brs {
   padding-bottom: 2em;
+}
+
+.waves-effect {
+  vertical-align: top !important;
 }
