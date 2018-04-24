@@ -60,6 +60,10 @@ table, tr, td {
   border: 1px solid black !important;
 }
 
+.align-top {
+  vertical-align: top;
+}
+
 .label-170 {
   color: #00aced;
 }
@@ -171,8 +175,4 @@ table, tr, td {
 
 .two-brs {
   padding-bottom: 2em;
-}
-
-.waves-effect {
-  vertical-align: top !important;
 }
