@@ -57,11 +57,11 @@ app.controller("projectsCtrl", function($scope) {
   $scope.otherProjs = [
     {
       title: '<div class="card center red"><a href="../assets/unity/td.html" target="_blank" class="waves-effect"><b>Tower Defense</b></a></div>',
-      description: 'A basic tower defense game with a geometric/cube theme with some dank memes. Made using Unity 5 with C#; requires <a href="http://unity3d.com/webplayer/" target="_blank" class="waves-effect">the Unity3D plug-in</a> to work.'
+      description: 'A basic tower defense game with a geometric/cube theme with some dank memes. Made using Unity 5 with C#; requires <a href="http://unity3d.com/webplayer/" target="_blank" class="waves-effect align-top">the Unity3D plug-in</a> to work.'
     },
     {
       title: '<div class="card center red"><a href="../assets/unity/interstellar_shooter.html" target="_blank" class="waves-effect"><b>Interstellar Shooter</b></a></div>',
-      description: 'Game resembling a classic space-shooter arcade. Made using Unity 5 with C#; also needs the <a href="http://unity3d.com/webplayer/" target="_blank" class="waves-effect">Unity3D plugin</a>.'
+      description: 'Game resembling a classic space-shooter arcade. Made using Unity 5 with C#; also needs the <a href="http://unity3d.com/webplayer/" target="_blank" class="waves-effect align-top">Unity3D plugin</a>.'
     },
     {
       title: '<div class="card center red"><a href="https://github.com/Edmond-Wu/PhotoAlbum" target="_blank" class="waves-effect"><b>Photo Album</b></a></div>',
