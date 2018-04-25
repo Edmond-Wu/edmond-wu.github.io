@@ -17,16 +17,16 @@
   },
   "homepage": "https://github.com/Edmond-Wu/edmond-wu.github.io#readme",
   "dependencies": {
+    "angular": "^1.6.10",
+    "angular-animate": "^1.6.10",
+    "angular-route": "^1.6.10",
+    "angular-sanitize": "^1.6.10",
     "html5-boilerplate": "^6.0.1",
     "jquery": "^3.3.1",
     "materialize-css": "^0.97.7",
     "mdi": "^2.2.43"
   },
   "devDependencies": {
-    "angular": "^1.6.10",
-    "angular-animate": "^1.6.10",
-    "angular-route": "^1.6.10",
-    "angular-sanitize": "^1.6.10",
     "gulp": "git://github.com/gulpjs/gulp.git#6d71a658c61edb3090221579d8f97dbe086ba2ed",
     "gulp-clean-css": "^3.9.0",
     "gulp-concat": "^2.6.1",
