@@ -64,10 +64,6 @@ table, tr, td {
   vertical-align: top;
 }
 
-.label-170 {
-  color: #00aced;
-}
-
 .btn {
   border-radius: 5px;
   font-size: 1em;
@@ -121,6 +117,7 @@ table, tr, td {
 
 .label-170 {
   font-size: 1.1em;
+  color: #00aced;
 }
 
 .larger {
