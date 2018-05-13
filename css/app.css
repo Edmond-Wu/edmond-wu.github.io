@@ -40,7 +40,7 @@ table, tr, td {
 }
 
 .align-top {
-  vertical-align: top;
+  vertical-align: top !important;
 }
 
 .btn {
