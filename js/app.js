@@ -43,11 +43,11 @@ app.controller("projectsCtrl", function($scope) {
     },
     {
       title: '<div class="card center blue"><a href="https://github.com/Edmond-Wu/socket-chat" target="_blank" class="waves-effect align-top"><b>Socket Chat</b></a></div>',
-      description: 'Another chat application, built using <a href="https://socket.io/" target="_blank" class="waves-effect align-top"><b>socket.io</b></a>! Users can log in, view other logged-on users, and change their message colors. Front-end designed with AngularJS and Materialize CSS.'
+      description: 'Another chat application, built using <a href="https://socket.io/" target="_blank" class="waves-effect align-top"><b>socket.io</b></a>! Users can log in, view other logged-on users, and change their message colors. Front-end designed with angularJS and Materialize CSS.'
     },
     {
       title: '<div class="card center blue"><a href="https://rutgerstc.github.io" target="_blank" class="waves-effect align-top"><b>Rutgers Tzu-Ching</b></a></div>',
-      description: 'Website for the Rutgers chapter of the Tzu-Chi Collegiate Association. Single-page application designed with AngularJS.'
+      description: 'Website for the Rutgers chapter of the Tzu-Chi Collegiate Association. Single-page application designed with angularJS.'
     },
     {
       title: '<div class="card center blue"><a href="http://devpost.com/software/insightweet" target="_blank" class="waves-effect align-top"><b>Insightweets</b></a></div>',
