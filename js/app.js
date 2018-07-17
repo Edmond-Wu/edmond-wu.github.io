@@ -31,19 +31,19 @@ app.config(function($routeProvider) {
  */
 app.controller("aboutCtrl", function($scope) {});
 app.controller("skillsCtrl", function($scope) {
-  $scope.languages = ["Java", "HTML/CSS", "Javascript", "Python", "C", "C#"];
+  $scope.languages = ["Java", "HTML5/CSS", "Javascript", "Python", "C", "C#"];
   $scope.frameworks = ["angularJS", "jQuery", "Bootstrap", "Materialize CSS", "Apache Ant", "NodeJS"];
-  $scope.tools = ["Ubuntu", "Redhat Enterprise", "Unity3D engine", "Git", "Subversion/SVN", "Atlassian Jira for Agile"];
+  $scope.tools = ["Linux (RedHat/Ubuntu)", "Windows", "Unity3D engine", "Git", "Subversion/SVN", "Atlassian Jira"];
 });
 app.controller("projectsCtrl", function($scope) {
   $scope.webProjs = [
     {
       title: '<div class="card center blue"><a href="https://github.com/wyang6788/redditer" target="_blank" class="waves-effect align-top"><b>Redditer</b></a></div>',
-      description: 'Ruby-On-Rails chat messaging application that aims to bring together people who subscribe to various Reddit subreddits! <a href="http://imgur.com/a/KjLsx" target="_blank" class="waves-effect">Imgur link</a> is provided as an example.'
+      description: 'Ruby-On-Rails chat messaging application that aims to bring together people who subscribe to various Reddit subreddits! <a href="http://imgur.com/a/KjLsx" target="_blank" class="waves-effect align-top"><b>Imgur link</b></a> is provided as an example.'
     },
     {
       title: '<div class="card center blue"><a href="https://github.com/Edmond-Wu/socket-chat" target="_blank" class="waves-effect align-top"><b>Socket Chat</b></a></div>',
-      description: 'Another chat application, built using socket.io! Users can log in, view other logged-on users, and change their message colors. Front-end designed with AngularJS and Materialize CSS.'
+      description: 'Another chat application, built using <a href="https://socket.io/" target="_blank" class="waves-effect align-top"><b>socket.io</b></a>! Users can log in, view other logged-on users, and change their message colors. Front-end designed with AngularJS and Materialize CSS.'
     },
     {
       title: '<div class="card center blue"><a href="https://rutgerstc.github.io" target="_blank" class="waves-effect align-top"><b>Rutgers Tzu-Ching</b></a></div>',
