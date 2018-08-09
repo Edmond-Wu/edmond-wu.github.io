@@ -86,12 +86,13 @@ table, tr, td {
   padding-top: 5em;
 }
 
-.half-br {
-  padding-bottom: 0.5em;
+.flex {
+  display: flex;
+  align-items: center;
 }
 
-.hidden {
-  display: none;
+.half-br {
+  padding-bottom: 0.5em;
 }
 
 .label-170 {

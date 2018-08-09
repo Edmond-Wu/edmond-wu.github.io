@@ -17,14 +17,14 @@
   },
   "homepage": "https://github.com/Edmond-Wu/edmond-wu.github.io#readme",
   "dependencies": {
+    "@mdi/font": "^2.5.94",
     "angular": "^1.7.0",
     "angular-animate": "^1.7.0",
     "angular-route": "^1.7.0",
     "angular-sanitize": "^1.7.0",
     "html5-boilerplate": "^6.0.1",
     "jquery": "^3.3.1",
-    "materialize-css": "0.97.7",
-    "mdi": "^2.2.43"
+    "materialize-css": "0.97.7"
   },
   "devDependencies": {
     "gulp": "4.0.0",
