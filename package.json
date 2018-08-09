@@ -23,15 +23,15 @@
     "angular-sanitize": "^1.7.0",
     "html5-boilerplate": "^6.0.1",
     "jquery": "^3.3.1",
-    "materialize-css": "^0.97.7",
+    "materialize-css": "0.97.7",
     "mdi": "^2.2.43"
   },
   "devDependencies": {
-    "gulp": "git://github.com/gulpjs/gulp.git#6d71a658c61edb3090221579d8f97dbe086ba2ed",
-    "gulp-clean-css": "^3.9.0",
+    "gulp": "4.0.0",
+    "gulp-clean-css": "^3.9.4",
     "gulp-concat": "^2.6.1",
-    "gulp-minify": "^2.1.0",
     "gulp-rename": "^1.2.2",
-    "gulp-series": "^1.0.2"
+    "gulp-series": "^1.0.2",
+    "gulp-uglify": "^3.0.1"
   }
 }
