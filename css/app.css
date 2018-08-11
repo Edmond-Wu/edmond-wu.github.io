@@ -130,7 +130,7 @@ table, tr, td {
 }
 
 .pad-left {
-  padding-left: 1em !important;
+  padding-left: 0.5em !important;
 }
 
 .pad-right {
