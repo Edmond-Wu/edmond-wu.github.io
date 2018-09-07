@@ -20,13 +20,13 @@ gulp.task('pack-vendor-js', function() {
 gulp.task('pack-controller-js', function() {
   return gulp.src(['js/controllers/about-control.js', 'js/controllers/skills-control.js',
     'js/controllers/projects-control.js', 'js/controllers/cs170-control.js', 'js/controllers/contact-control.js'])
-    .pipe(concat('controller.js'))
+    .pipe(concat('controllers.js'))
     .pipe(gulp.dest('js'));
 });
 
 /* combines js files */
 gulp.task('combine-js', function() {
-  return gulp.src(['js/vendor.js', 'js/app.js', 'js/controller.js'])
+  return gulp.src(['js/vendor.js', 'js/app.js', 'js/controllers.js'])
     .pipe(concat('build.js'))
     .pipe(gulp.dest('js'));
 })
