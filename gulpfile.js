@@ -6,7 +6,7 @@ var concat = require('gulp-concat');
 var series = require('gulp-series');
 
 /* packs vendor js files into a single file and minifies it */
-gulp.task('pack-js', function() {
+gulp.task('pack-vendor-js', function() {
   return gulp.src(['node_modules/html5-boilerplate/dist/js/main.js', 'node_modules/angular/angular.min.js',
     'node_modules/angular-route/angular-route.min.js', 'node_modules/angular-animate/angular-animate.min.js',
     'node_modules/angular-sanitize/angular-sanitize.min.js', 'node_modules/jquery/dist/jquery.min.js',
@@ -16,9 +16,17 @@ gulp.task('pack-js', function() {
     .pipe(gulp.dest('js'));
 });
 
-/* adds on app.js separately */
-gulp.task('add-app-js', function() {
-  return gulp.src(['js/vendor.js', 'js/app.js'])
+/* packs controller js files into single minified file */
+gulp.task('pack-controller-js', function() {
+  return gulp.src(['js/controllers/about-control.js', 'js/controllers/skills-control.js',
+    'js/controllers/projects-control.js', 'js/controllers/cs170-control.js', 'js/controllers/contact-control.js'])
+    .pipe(concat('controller.js'))
+    .pipe(gulp.dest('js'));
+});
+
+/* combines js files */
+gulp.task('combine-js', function() {
+  return gulp.src(['js/vendor.js', 'js/app.js', 'js/controller.js'])
     .pipe(concat('build.js'))
     .pipe(gulp.dest('js'));
 })
@@ -37,7 +45,12 @@ gulp.task('pack-css', function() {
 gulp.task(
   'default',
   gulp.parallel(
-    gulp.series('pack-js', 'add-app-js'),
+    gulp.series(
+      gulp.parallel(
+        'pack-vendor-js', 'pack-controller-js'
+      ),
+      'combine-js'
+    ),
     'pack-css'
   )
 );
