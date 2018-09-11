@@ -12,22 +12,22 @@ gulp.task('pack-vendor-js', function() {
     'node_modules/angular-route/angular-route.min.js', 'node_modules/angular-animate/angular-animate.min.js',
     'node_modules/angular-sanitize/angular-sanitize.min.js', 'node_modules/jquery/dist/jquery.min.js',
     'node_modules/materialize-css/dist/js/materialize.min.js', 'js/init-materialize.js'])
-    .pipe(concat('vendor.min.js'))
-    .pipe(uglify())
+    .pipe(concat('vendor.js'))
     .pipe(gulp.dest('js'));
 });
 
 /* packs angular app js files into single minified file */
 gulp.task('pack-angular-js', function() {
   return gulp.src(['js/app.js', 'js/controllers/about-control.js', 'js/controllers/skills-control.js',
-    'js/controllers/projects-control.js', 'js/controllers/cs170-control.js', 'js/controllers/contact-control.js'])
-    .pipe(concat('angular-app.min.js'))
+    'js/controllers/projects-control.js', 'js/controllers/cs170-control.js',
+    'js/controllers/contact-control.js', 'js/slider-directive.js'])
+    .pipe(concat('angular-app.js'))
     .pipe(gulp.dest('js'));
 });
 
 /* combines js files */
 gulp.task('combine-js', function() {
-  return gulp.src(['js/vendor.min.js', 'js/angular-app.min.js'])
+  return gulp.src(['js/vendor.js', 'js/angular-app.js'])
     .pipe(concat('build.js'))
     .pipe(ngAnnotate())
     .pipe(uglify())
