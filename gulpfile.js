@@ -11,7 +11,7 @@ gulp.task('pack-vendor-js', function() {
   return gulp.src(['node_modules/html5-boilerplate/dist/js/main.js', 'node_modules/angular/angular.min.js',
     'node_modules/angular-route/angular-route.min.js', 'node_modules/angular-animate/angular-animate.min.js',
     'node_modules/angular-sanitize/angular-sanitize.min.js', 'node_modules/jquery/dist/jquery.min.js',
-    'node_modules/materialize-css/dist/js/materialize.min.js', 'js/init-materialize.js', 'js/medium-widget.js'])
+    'node_modules/materialize-css/dist/js/materialize.min.js', 'js/init-materialize.js'])
     .pipe(concat('vendor.js'))
     .pipe(gulp.dest('js'));
 });
