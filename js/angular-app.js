@@ -106,7 +106,7 @@ angular.module('myApp').controller('blogCtrl', function($scope, mediumFactory) {
       "fields": ["description", "publishAt"],
       "ratio": "landscape"
     }
-  })
+  });
 });
 
 /**
