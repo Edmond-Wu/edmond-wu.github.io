@@ -23,5 +23,18 @@ app.config(function($routeProvider) {
       templateUrl: 'views/contact.html',
       controller: 'contactCtrl'
     })
+    .when('/blog', {
+      templateUrl: 'views/blog.html',
+      controller: 'blogCtrl'
+    })
     .otherwise('/about');
 });
+
+app.factory('mediumFactory', function() {
+  var data = MediumWidget;
+  var service = {};
+  service.getData = function() {
+    return data;
+  }
+  return service;
+})

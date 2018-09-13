@@ -23,8 +23,21 @@ app.config(function($routeProvider) {
       templateUrl: 'views/contact.html',
       controller: 'contactCtrl'
     })
+    .when('/blog', {
+      templateUrl: 'views/blog.html',
+      controller: 'blogCtrl'
+    })
     .otherwise('/about');
 });
+
+app.factory('mediumFactory', function() {
+  var data = MediumWidget;
+  var service = {};
+  service.getData = function() {
+    return data;
+  }
+  return service;
+})
 
 angular.module('myApp').controller('aboutCtrl', function($scope) {});
 
@@ -80,6 +93,21 @@ angular.module('myApp').controller('projectsCtrl', function($scope) {
 angular.module('myApp').controller('cs170Ctrl', function($scope) {});
 
 angular.module('myApp').controller('contactCtrl', function($scope) {});
+
+angular.module('myApp').controller('blogCtrl', function($scope, mediumFactory) {
+  $scope.data = mediumFactory.getData();
+  $scope.data.Init({
+    renderTo: '#medium-widget',
+    params: {
+      "resource": "https://medium.com/@edmond.wu0895",
+      "postsPerLine": 2,
+      "limit": 4,
+      "picture": "big",
+      "fields": ["description", "publishAt"],
+      "ratio": "landscape"
+    }
+  })
+});
 
 /**
  * Directive for slide toggle functionality

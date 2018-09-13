@@ -11,7 +11,7 @@ gulp.task('pack-vendor-js', function() {
   return gulp.src(['node_modules/html5-boilerplate/dist/js/main.js', 'node_modules/angular/angular.min.js',
     'node_modules/angular-route/angular-route.min.js', 'node_modules/angular-animate/angular-animate.min.js',
     'node_modules/angular-sanitize/angular-sanitize.min.js', 'node_modules/jquery/dist/jquery.min.js',
-    'node_modules/materialize-css/dist/js/materialize.min.js', 'js/init-materialize.js'])
+    'node_modules/materialize-css/dist/js/materialize.min.js', 'js/init-materialize.js', 'js/medium-widget.js'])
     .pipe(concat('vendor.js'))
     .pipe(gulp.dest('js'));
 });
@@ -20,7 +20,7 @@ gulp.task('pack-vendor-js', function() {
 gulp.task('pack-angular-js', function() {
   return gulp.src(['js/app.js', 'js/controllers/about-control.js', 'js/controllers/skills-control.js',
     'js/controllers/projects-control.js', 'js/controllers/cs170-control.js',
-    'js/controllers/contact-control.js', 'js/slider-directive.js'])
+    'js/controllers/contact-control.js', 'js/controllers/blog-control.js', 'js/slider-directive.js'])
     .pipe(concat('angular-app.js'))
     .pipe(gulp.dest('js'));
 });
