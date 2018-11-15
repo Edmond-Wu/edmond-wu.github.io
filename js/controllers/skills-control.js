@@ -1,5 +1,5 @@
 angular.module('myApp').controller('skillsCtrl', function($scope) {
-  $scope.languages = ['Java', 'HTML5/CSS', 'Javascript', 'Python', 'C'];
-  $scope.frameworks = ['angularJS', 'jQuery', 'Materialize (and other similar front-end frameworks)', 'Gradle', 'LaTeX'];
+  $scope.languages = ['Java', 'HTML5/CSS', 'Javascript', 'Python', 'C', 'LaTeX'];
+  $scope.frameworks = ['angularJS', 'jQuery', 'Bootstrap-type CSS Frameworks', 'Gradle'];
   $scope.tools = ['Linux (RedHat/Ubuntu)', 'NPM', 'Unity3D engine', 'Git', 'Atlassian Jira'];
 });
