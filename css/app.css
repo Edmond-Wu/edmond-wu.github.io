@@ -141,6 +141,10 @@ table, tr, td {
   border-radius: 100% !important;
 }
 
+.projTitle {
+  width: 18%;
+}
+
 .side-nav {
   top: 56px !important;
   width: 165px;
