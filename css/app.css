@@ -145,6 +145,11 @@ table, tr, td {
   width: 18%;
 }
 
+.resume-list {
+  text-align: left;
+  float: left;
+}
+
 .side-nav {
   top: 56px !important;
   width: 165px;

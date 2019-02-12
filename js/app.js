@@ -23,5 +23,9 @@ app.config(function($routeProvider) {
       templateUrl: 'views/contact.html',
       controller: 'contactCtrl'
     })
+    .when('/resume', {
+      templateUrl: 'views/resume.html',
+      controller: 'resumeCtrl'
+    })
     .otherwise('/about');
 });

@@ -23,6 +23,10 @@ app.config(function($routeProvider) {
       templateUrl: 'views/contact.html',
       controller: 'contactCtrl'
     })
+    .when('/resume', {
+      templateUrl: 'views/resume.html',
+      controller: 'resumeCtrl'
+    })
     .otherwise('/about');
 });
 
@@ -78,6 +82,8 @@ angular.module('myApp').controller('projectsCtrl', function($scope) {
 });
 
 angular.module('myApp').controller('cs170Ctrl', function($scope) {});
+
+angular.module('myApp').controller('resumeCtrl', function($scope) {});
 
 angular.module('myApp').controller('contactCtrl', function($scope) {});
 
