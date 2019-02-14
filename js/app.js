@@ -15,10 +15,10 @@ app.config(function($routeProvider) {
       templateUrl: 'views/projects.html',
       controller: 'projectsCtrl'
     })
-    .when('/cs170', {
-      templateUrl: 'views/cs170.html',
-      controller: 'cs170Ctrl'
-    })
+    // .when('/cs170', {
+    //   templateUrl: 'views/cs170.html',
+    //   controller: 'cs170Ctrl'
+    // })
     .when('/contact', {
       templateUrl: 'views/contact.html',
       controller: 'contactCtrl'

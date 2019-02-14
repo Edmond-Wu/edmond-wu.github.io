@@ -15,10 +15,10 @@ app.config(function($routeProvider) {
       templateUrl: 'views/projects.html',
       controller: 'projectsCtrl'
     })
-    .when('/cs170', {
-      templateUrl: 'views/cs170.html',
-      controller: 'cs170Ctrl'
-    })
+    // .when('/cs170', {
+    //   templateUrl: 'views/cs170.html',
+    //   controller: 'cs170Ctrl'
+    // })
     .when('/contact', {
       templateUrl: 'views/contact.html',
       controller: 'contactCtrl'
@@ -35,7 +35,7 @@ angular.module('myApp').controller('aboutCtrl', function($scope) {});
 angular.module('myApp').controller('skillsCtrl', function($scope) {
   $scope.languages = ['Java', 'HTML5/CSS', 'Javascript', 'Python', 'C', 'LaTeX'];
   $scope.frameworks = ['angularJS', 'jQuery', 'Bootstrap-type CSS Frameworks', 'Gradle'];
-  $scope.tools = ['Linux (RedHat/Ubuntu)', 'NPM', 'Unity3D engine', 'Git', 'Atlassian Jira'];
+  $scope.tools = ['Linux OS', 'NPM', 'Unity3D engine', 'Git', 'Atlassian Jira'];
 });
 
 angular.module('myApp').controller('projectsCtrl', function($scope) {
@@ -81,7 +81,7 @@ angular.module('myApp').controller('projectsCtrl', function($scope) {
   ];
 });
 
-angular.module('myApp').controller('cs170Ctrl', function($scope) {});
+// angular.module('myApp').controller('cs170Ctrl', function($scope) {});
 
 angular.module('myApp').controller('resumeCtrl', function($scope) {});
 
