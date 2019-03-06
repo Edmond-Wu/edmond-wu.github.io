@@ -121,6 +121,10 @@ table, tr, td {
   font-size: 1.25em;
 }
 
+.no-padding {
+  padding: 0;
+}
+
 .one-br {
   padding-bottom: 1em;
 }
@@ -135,6 +139,14 @@ table, tr, td {
 
 .pad-right {
   padding-right: 1em !important;
+}
+
+.pad-top {
+  padding-top: 1em !important;
+}
+
+.pad-bottom {
+  padding-bottom: 50px !important;
 }
 
 .profpic {
