@@ -18,8 +18,8 @@ gulp.task('pack-vendor-js', function() {
 
 /* packs angular app js files into single minified file */
 gulp.task('pack-angular-js', function() {
-  return gulp.src(['js/app.js', 'js/controllers/about-control.js', 'js/controllers/skills-control.js',
-    'js/controllers/projects-control.js', 'js/controllers/cs170-control.js', 'js/controllers/resume-control.js',
+  return gulp.src(['js/app.js', 'js/controllers/about-control.js', 'js/controllers/projects-control.js',
+    'js/controllers/cs170-control.js', 'js/controllers/resume-control.js',
     'js/controllers/contact-control.js', 'js/slider-directive.js'])
     .pipe(concat('angular-app.js'))
     .pipe(gulp.dest('js'));

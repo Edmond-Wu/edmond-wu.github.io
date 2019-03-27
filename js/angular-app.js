@@ -7,10 +7,10 @@ app.config(function($routeProvider) {
       templateUrl: 'views/about.html',
       controller: 'aboutCtrl'
     })
-    .when('/skills', {
-      templateUrl: 'views/skills.html',
-      controller: 'skillsCtrl'
-    })
+    // .when('/skills', {
+    //   templateUrl: 'views/skills.html',
+    //   controller: 'skillsCtrl'
+    // })
     .when('/projects', {
       templateUrl: 'views/projects.html',
       controller: 'projectsCtrl'
@@ -31,12 +31,6 @@ app.config(function($routeProvider) {
 });
 
 angular.module('myApp').controller('aboutCtrl', function($scope) {});
-
-angular.module('myApp').controller('skillsCtrl', function($scope) {
-  $scope.languages = ['Java', 'HTML5/CSS', 'Javascript', 'Python', 'C', 'LaTeX'];
-  $scope.frameworks = ['angularJS', 'jQuery', 'Bootstrap-type CSS Frameworks', 'Gradle'];
-  $scope.tools = ['Linux OS', 'NPM', 'Unity3D engine', 'Git', 'Atlassian Jira'];
-});
 
 angular.module('myApp').controller('projectsCtrl', function($scope) {
   $scope.webProjs = [

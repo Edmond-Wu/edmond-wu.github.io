@@ -7,10 +7,10 @@ app.config(function($routeProvider) {
       templateUrl: 'views/about.html',
       controller: 'aboutCtrl'
     })
-    .when('/skills', {
-      templateUrl: 'views/skills.html',
-      controller: 'skillsCtrl'
-    })
+    // .when('/skills', {
+    //   templateUrl: 'views/skills.html',
+    //   controller: 'skillsCtrl'
+    // })
     .when('/projects', {
       templateUrl: 'views/projects.html',
       controller: 'projectsCtrl'
