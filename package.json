@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/Edmond-Wu/edmond-wu.github.io#readme",
   "dependencies": {
-    "@mdi/font": "^2.5.94",
+    "@mdi/font": "^3.8.95",
     "angular": "^1.7.0",
     "angular-animate": "^1.7.0",
     "angular-route": "^1.7.0",
