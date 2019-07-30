@@ -108,6 +108,10 @@ table, tr, td {
   text-align: left;
 }
 
+.list {
+  list-style-type: disc;
+}
+
 .much-larger {
   font-size: 1.35em !important;
 }
