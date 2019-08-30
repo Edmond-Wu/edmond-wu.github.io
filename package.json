@@ -17,22 +17,23 @@
   },
   "homepage": "https://github.com/Edmond-Wu/edmond-wu.github.io#readme",
   "dependencies": {
-    "@mdi/font": "^3.8.95",
-    "angular": "^1.7.0",
-    "angular-animate": "^1.7.0",
-    "angular-route": "^1.7.0",
-    "angular-sanitize": "^1.7.0",
+    "@mdi/font": "^3.9.97",
+    "angular": "^1.7.8",
+    "angular-animate": "^1.7.8",
+    "angular-route": "^1.7.8",
+    "angular-sanitize": "^1.7.8",
     "html5-boilerplate": "^6.0.1",
-    "jquery": "^3.3.1",
-    "materialize-css": "0.97.7"
+    "jquery": "^3.4.1",
+    "materialize-css": "0.97.7",
+    "npm": "^6.11.2"
   },
   "devDependencies": {
     "gulp": "4.0.0",
-    "gulp-clean-css": "^3.9.4",
+    "gulp-clean-css": "^3.10.0",
     "gulp-concat": "^2.6.1",
     "gulp-ng-annotate": "^2.1.0",
     "gulp-rename": "^1.2.2",
     "gulp-series": "^1.0.2",
-    "gulp-uglify": "^3.0.1"
+    "gulp-uglify": "^3.0.2"
   }
 }
