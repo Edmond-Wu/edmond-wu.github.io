@@ -19,10 +19,10 @@ app.config(function($routeProvider) {
     //   templateUrl: 'views/cs170.html',
     //   controller: 'cs170Ctrl'
     // })
-    .when('/contact', {
-      templateUrl: 'views/contact.html',
-      controller: 'contactCtrl'
-    })
+    // .when('/contact', {
+    //   templateUrl: 'views/contact.html',
+    //   controller: 'contactCtrl'
+    // })
     .when('/resume', {
       templateUrl: 'views/resume.html',
       controller: 'resumeCtrl'
