@@ -27,5 +27,9 @@ app.config(function($routeProvider) {
       templateUrl: 'views/resume.html',
       controller: 'resumeCtrl'
     })
+    .when('/blog', {
+      templateUrl: 'views/blog.html',
+      controller: 'blogCtrl'
+    })
     .otherwise('/about');
 });
