@@ -27,6 +27,10 @@ app.config(function($routeProvider) {
       templateUrl: 'views/resume.html',
       controller: 'resumeCtrl'
     })
+    .when('/blog', {
+      templateUrl: 'views/blog.html',
+      controller: 'blogCtrl'
+    })
     .otherwise('/about');
 });
 
@@ -78,6 +82,19 @@ angular.module('myApp').controller('projectsCtrl', function($scope) {
 // angular.module('myApp').controller('cs170Ctrl', function($scope) {});
 
 angular.module('myApp').controller('resumeCtrl', function($scope) {});
+
+angular.module('myApp').controller('blogCtrl', function($scope) {
+  var container = document.getElementById("retainable-rss-embed");
+  if (container) {
+      var css = document.createElement('link');
+      css.href = "css/retainable-rss/retainable.css";
+      css.rel = "stylesheet"
+      document.getElementsByTagName('head')[0].appendChild(css);
+      var script = document.createElement('script');
+      script.src = "js/retainable-rss/retainable.js";
+      document.getElementsByTagName('body')[0].appendChild(script);
+  }
+});
 
 angular.module('myApp').controller('contactCtrl', function($scope) {});
 

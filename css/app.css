@@ -35,6 +35,11 @@ body, table, tr, td, .top-bar, .menu, .side-nav {
   background-color: black !important;
 }
 
+h2 {
+  font-size: 175%;
+  font-weight: bold;
+}
+
 table, tr, td {
   border: 1px solid black !important;
 }
