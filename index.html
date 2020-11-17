@@ -45,17 +45,17 @@
         <li><a href="#!resume" class="btn blue larger waves-effect waves-light">résumé</a></li>
         <!-- <li><a href="#!contact" a class="btn blue waves-effect waves-light larger">contact</a></li> -->
       </ul>
-      <a href="#" data-activates="mobile-nav" class="pad-left button-collapse waves-effect"><i class="mdi mdi-menu"></i></a>
-      <ul class="side-nav" id="mobile-nav">
-        <li><a href="#!about" class="waves-effect center">about</a></li>
-        <li><a href="#!projects" class="waves-effect center">projects</a></li>
-        <!-- <li><a href="#!cs170" class="waves-effect center">cs170</a></li> -->
-        <li><a href="#!blog" class="waves-effect center">blog</a></li>
-        <li><a href="#!resume" class="waves-effect center">résumé</a></li>
-        <!-- <li><a href="#!contact" class="waves-effect center">contact</a></li> -->
-      </ul>
     </nav>
+    <a href="#" data-target="slide-out" class="sidenav-trigger waves-effect burger pad-left hide-on-large-only"><i class="mdi mdi-menu"></i></a>
   </div>
+
+  <ul id="slide-out" class="sidenav">
+    <li><a href="#!about" class="waves-effect center sidenav-close">about</a></li>
+    <li><a href="#!projects" class="waves-effect center sidenav-close">projects</a></li>
+    <li><a href="#!blog" class="waves-effect center sidenav-close">blog</a></li>
+    <li><a href="#!resume" class="waves-effect center sidenav-close">résumé</a></li>
+  </ul>
+
   <h1 class="hide">Edmond Wu: Developer</h1>
   <!-- display views -->
   <div data-ng-view class="fade"></div>

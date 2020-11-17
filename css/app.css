@@ -59,6 +59,11 @@ table, tr, td {
   opacity: 0.85;
 }
 
+.burger {
+  padding-top: .25em;
+  font-size: 2em;
+}
+
 .fade {
   position: absolute;
   top: auto;
@@ -155,7 +160,7 @@ table, tr, td {
 }
 
 .pad-bottom {
-  padding-bottom: 50px !important;
+  padding-bottom: 60px !important;
 }
 
 .profpic {
@@ -171,13 +176,19 @@ table, tr, td {
   float: left;
 }
 
-.side-nav {
+.sidenav {
   top: 56px !important;
   width: 165px;
+  background-color: black;
 }
 
-.side-nav a {
+.sidenav a {
   font-size: 18px !important;
+  color: white !important;
+}
+
+.sidenav a:hover {
+  color: #05E9FF !important;
 }
 
 .two-brs {
