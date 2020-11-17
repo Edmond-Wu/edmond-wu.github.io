@@ -23,8 +23,8 @@
     "angular-route": "^1.7.8",
     "angular-sanitize": "^1.7.8",
     "html5-boilerplate": "^6.0.1",
-    "jquery": "^3.4.1",
-    "materialize-css": "0.97.7",
+    "jquery": "^3.5.1",
+    "materialize-css": "^1.0.0-rc.2",
     "npm": "^6.11.2"
   },
   "devDependencies": {
